@@ -8,20 +8,25 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel\\.nuget\\packages\\": {}
+    "C:\\Users\\Johen\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gabriel\\Documents\\GitHub\\Programacion4\\Expo\\Expo\\Expo.vbproj",
+      "projectUniqueName": "C:\\Users\\Johen\\Documents\\GitHub\\Programacion4\\Expo\\Expo\\Expo.vbproj",
       "projectName": "Expo",
-      "projectPath": "C:\\Users\\Gabriel\\Documents\\GitHub\\Programacion4\\Expo\\Expo\\Expo.vbproj",
-      "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gabriel\\Documents\\GitHub\\Programacion4\\Expo\\Expo\\obj\\",
+      "projectPath": "C:\\Users\\Johen\\Documents\\GitHub\\Programacion4\\Expo\\Expo\\Expo.vbproj",
+      "packagesPath": "C:\\Users\\Johen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Johen\\Documents\\GitHub\\Programacion4\\Expo\\Expo\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Johen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"
