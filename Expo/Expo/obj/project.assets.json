@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gabriel\\source\\repos\\Expo\\Expo\\Expo.vbproj",
+      "projectUniqueName": "C:\\Users\\Gabriel\\Documents\\GitHub\\Programacion4\\Expo\\Expo\\Expo.vbproj",
       "projectName": "Expo",
-      "projectPath": "C:\\Users\\Gabriel\\source\\repos\\Expo\\Expo\\Expo.vbproj",
+      "projectPath": "C:\\Users\\Gabriel\\Documents\\GitHub\\Programacion4\\Expo\\Expo\\Expo.vbproj",
       "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gabriel\\source\\repos\\Expo\\Expo\\obj\\",
+      "outputPath": "C:\\Users\\Gabriel\\Documents\\GitHub\\Programacion4\\Expo\\Expo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
