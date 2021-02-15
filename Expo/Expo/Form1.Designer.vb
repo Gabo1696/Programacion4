@@ -25,17 +25,24 @@ Partial Class Form1
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -77,8 +84,71 @@ Partial Class Form1
         Me.TabPage2.Text = "Gabriel"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Audi", "Nissan ", "Jeep", "Geely"})
+        Me.ComboBox1.Location = New System.Drawing.Point(38, 212)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox1.TabIndex = 6
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(489, 160)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 5
+        Me.Button5.Text = "Fuente"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(360, 159)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 4
+        Me.Button4.Text = "Derecha"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(236, 159)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "Centro"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(123, 160)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Izquierda "
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(22, 160)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Color"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(7, 4)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(357, 122)
+        Me.RichTextBox1.TabIndex = 0
+        Me.RichTextBox1.Text = ""
+        '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.GroupBox1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 24)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
@@ -97,67 +167,60 @@ Partial Class Form1
         Me.TabPage4.Text = "Giovanni"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'RichTextBox1
+        'GroupBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(7, 4)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(357, 122)
-        Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = ""
+        Me.GroupBox1.Controls.Add(Me.Button6)
+        Me.GroupBox1.Controls.Add(Me.RadioButton3)
+        Me.GroupBox1.Controls.Add(Me.RadioButton2)
+        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 14)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(208, 144)
+        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Seleccione horario del turno"
         '
-        'Button1
+        'RadioButton1
         '
-        Me.Button1.Location = New System.Drawing.Point(22, 160)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Color"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(7, 23)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(42, 19)
+        Me.RadioButton1.TabIndex = 0
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Dia"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'RadioButton2
         '
-        Me.Button2.Location = New System.Drawing.Point(123, 160)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Izquierda "
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(7, 49)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(53, 19)
+        Me.RadioButton2.TabIndex = 1
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "Tarde"
+        Me.RadioButton2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'RadioButton3
         '
-        Me.Button3.Location = New System.Drawing.Point(236, 159)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Centro"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(7, 75)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(60, 19)
+        Me.RadioButton3.TabIndex = 2
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "Noche"
+        Me.RadioButton3.UseVisualStyleBackColor = True
         '
-        'Button4
+        'Button6
         '
-        Me.Button4.Location = New System.Drawing.Point(360, 159)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Derecha"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(489, 160)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 5
-        Me.Button5.Text = "Fuente"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Audi", "Nissan ", "Jeep", "Geely"})
-        Me.ComboBox1.Location = New System.Drawing.Point(38, 212)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox1.TabIndex = 6
+        Me.Button6.Location = New System.Drawing.Point(7, 115)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 3
+        Me.Button6.Text = "Aceptar"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -169,6 +232,9 @@ Partial Class Form1
         Me.Text = "Contenedores .NET"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        Me.TabPage3.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -185,4 +251,9 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Button6 As Button
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
 End Class
