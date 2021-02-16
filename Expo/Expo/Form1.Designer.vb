@@ -43,8 +43,6 @@ Partial Class Form1
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.Mostrar = New System.Windows.Forms.ToolStripMenuItem()
         Me.Cerrar = New System.Windows.Forms.ToolStripMenuItem()
@@ -54,7 +52,6 @@ Partial Class Form1
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,7 +60,6 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Location = New System.Drawing.Point(2, 2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -80,7 +76,7 @@ Partial Class Form1
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(807, 330)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Johen"
+        Me.TabPage1.Text = "Parte 1"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'MaskedTextBox1
@@ -126,7 +122,7 @@ Partial Class Form1
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(807, 330)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Gabriel"
+        Me.TabPage2.Text = "Parte 2"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'ComboBox1
@@ -199,7 +195,7 @@ Partial Class Form1
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(807, 330)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Cata"
+        Me.TabPage3.Text = "Parte 3"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -257,26 +253,6 @@ Partial Class Form1
         Me.RadioButton1.Text = "Dia"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.Button7)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(807, 330)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Giovanni"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(67, 43)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(153, 29)
-        Me.Button7.TabIndex = 0
-        Me.Button7.Text = "Boton ContextMenu"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
@@ -312,7 +288,6 @@ Partial Class Form1
         Me.TabPage3.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -322,7 +297,6 @@ Partial Class Form1
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents TabPage4 As TabPage
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
@@ -338,7 +312,6 @@ Partial Class Form1
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents MaskedTextBox1 As MaskedTextBox
-    Friend WithEvents Button7 As Button
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents Mostrar As ToolStripMenuItem
     Friend WithEvents Cerrar As ToolStripMenuItem
