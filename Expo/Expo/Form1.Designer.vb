@@ -225,7 +225,7 @@ Partial Class Form1
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Location = New System.Drawing.Point(7, 75)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(67, 21)
+        Me.RadioButton3.Size = New System.Drawing.Size(60, 19)
         Me.RadioButton3.TabIndex = 2
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "Noche"
@@ -236,7 +236,7 @@ Partial Class Form1
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Location = New System.Drawing.Point(7, 49)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(62, 21)
+        Me.RadioButton2.Size = New System.Drawing.Size(53, 19)
         Me.RadioButton2.TabIndex = 1
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Tarde"
@@ -247,7 +247,7 @@ Partial Class Form1
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Location = New System.Drawing.Point(7, 23)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(48, 21)
+        Me.RadioButton1.Size = New System.Drawing.Size(42, 19)
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Dia"
@@ -258,18 +258,18 @@ Partial Class Form1
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Mostrar, Me.Cerrar})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(194, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(182, 48)
         '
         'Mostrar
         '
         Me.Mostrar.Name = "Mostrar"
-        Me.Mostrar.Size = New System.Drawing.Size(193, 22)
+        Me.Mostrar.Size = New System.Drawing.Size(181, 22)
         Me.Mostrar.Text = "ToolStripMenuItem1"
         '
         'Cerrar
         '
         Me.Cerrar.Name = "Cerrar"
-        Me.Cerrar.Size = New System.Drawing.Size(193, 22)
+        Me.Cerrar.Size = New System.Drawing.Size(181, 22)
         Me.Cerrar.Text = "ToolStripMenuItem2"
         '
         'Form1

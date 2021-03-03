@@ -35,3 +35,4 @@ C:\Users\Johen\Documents\GitHub\Programacion4\Expo\Expo\obj\Debug\net5.0-windows
 C:\Users\Johen\Documents\GitHub\Programacion4\Expo\Expo\obj\Debug\net5.0-windows\ref\Expo.dll
 C:\Users\Johen\Documents\GitHub\Programacion4\Expo\Expo\obj\Debug\net5.0-windows\Expo.pdb
 C:\Users\Johen\Documents\GitHub\Programacion4\Expo\Expo\obj\Debug\net5.0-windows\Expo.genruntimeconfig.cache
+C:\Users\Gabriel\Documents\GitHub\Programacion4\Expo\Expo\obj\Debug\net5.0-windows\Expo.Resources.resources
