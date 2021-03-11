@@ -1,0 +1,6 @@
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaDatos\obj\Debug\CapaDatos.pdb

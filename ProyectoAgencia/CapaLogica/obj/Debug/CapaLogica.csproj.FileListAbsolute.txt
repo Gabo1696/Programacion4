@@ -1,0 +1,9 @@
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\CapaLogica\obj\Debug\CapaLogica.pdb
