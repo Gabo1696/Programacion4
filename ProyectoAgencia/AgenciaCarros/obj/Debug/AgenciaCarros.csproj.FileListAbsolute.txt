@@ -84,3 +84,7 @@ C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\ob
 C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debug\AgenciaCarros.csproj.CopyComplete
 C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debug\AgenciaCarros.dll
 C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debug\AgenciaCarros.pdb
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\bin\EntityFramework.dll
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\bin\EntityFramework.SqlServer.dll
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\bin\EntityFramework.xml
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\bin\EntityFramework.SqlServer.xml

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProyectoAgenciaModelStoreContainer" CdmEntityContainer="ProyectoAgenciaEntities">
+    <EntitySetMapping Name="CANTON">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.CANTON">
+        <MappingFragment StoreEntitySet="CANTON">
+          <ScalarProperty Name="ID_CANTON" ColumnName="ID_CANTON" />
+          <ScalarProperty Name="NOMBRE_CANTON" ColumnName="NOMBRE_CANTON" />
+          <ScalarProperty Name="ID_PROVINCIA" ColumnName="ID_PROVINCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="CEDULA" ColumnName="CEDULA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+          <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_DIRECCION">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.DETALLE_DIRECCION">
+        <MappingFragment StoreEntitySet="DETALLE_DIRECCION">
+          <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ID_PROVINCIA" ColumnName="ID_PROVINCIA" />
+          <ScalarProperty Name="ID_CANTON" ColumnName="ID_CANTON" />
+          <ScalarProperty Name="ID_DISTRITO" ColumnName="ID_DISTRITO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTRITO">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.DISTRITO">
+        <MappingFragment StoreEntitySet="DISTRITO">
+          <ScalarProperty Name="ID_DISTRITO" ColumnName="ID_DISTRITO" />
+          <ScalarProperty Name="NOMBRE_DISTRITO" ColumnName="NOMBRE_DISTRITO" />
+          <ScalarProperty Name="ID_CANTON" ColumnName="ID_CANTON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLEADO">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.EMPLEADO">
+        <MappingFragment StoreEntitySet="EMPLEADO">
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+          <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="SALARIO" ColumnName="SALARIO" />
+          <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACTURA">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.FACTURA">
+        <MappingFragment StoreEntitySet="FACTURA">
+          <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="UNIDADES" ColumnName="UNIDADES" />
+          <ScalarProperty Name="IMPORTE_TOTAL" ColumnName="IMPORTE_TOTAL" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_REPUESTO" ColumnName="ID_REPUESTO" />
+          <ScalarProperty Name="ID_VEHICULO" ColumnName="ID_VEHICULO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INGRESO">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.INGRESO">
+        <MappingFragment StoreEntitySet="INGRESO">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTARIO">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.INVENTARIO">
+        <MappingFragment StoreEntitySet="INVENTARIO">
+          <ScalarProperty Name="ID_INVENTARIO" ColumnName="ID_INVENTARIO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="ULTIMA_VENTA" ColumnName="ULTIMA_VENTA" />
+          <ScalarProperty Name="ID_REPUESTO" ColumnName="ID_REPUESTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVEEDOR">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.PROVEEDOR">
+        <MappingFragment StoreEntitySet="PROVEEDOR">
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="NOMBRE_PROVEEDOR" ColumnName="NOMBRE_PROVEEDOR" />
+          <ScalarProperty Name="DESCRIPCION_PROVEEDOR" ColumnName="DESCRIPCION_PROVEEDOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVINCIA">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.PROVINCIA">
+        <MappingFragment StoreEntitySet="PROVINCIA">
+          <ScalarProperty Name="ID_PROVINCIA" ColumnName="ID_PROVINCIA" />
+          <ScalarProperty Name="NOMBRE_PROVINCIA" ColumnName="NOMBRE_PROVINCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REPUESTO">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.REPUESTO">
+        <MappingFragment StoreEntitySet="REPUESTO">
+          <ScalarProperty Name="ID_REPUESTO" ColumnName="ID_REPUESTO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PRECIO_UNITARIO" ColumnName="PRECIO_UNITARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROL">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.ROL">
+        <MappingFragment StoreEntitySet="ROL">
+          <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VEHICULO">
+      <EntityTypeMapping TypeName="ProyectoAgenciaModel.VEHICULO">
+        <MappingFragment StoreEntitySet="VEHICULO">
+          <ScalarProperty Name="ID_VEHICULO" ColumnName="ID_VEHICULO" />
+          <ScalarProperty Name="PLACA" ColumnName="PLACA" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="MODELO" ColumnName="MODELO" />
+          <ScalarProperty Name="ANNO" ColumnName="ANNO" />
+          <ScalarProperty Name="CILINDRAJE" ColumnName="CILINDRAJE" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="TIPO_COMBUSTIBLE" ColumnName="TIPO_COMBUSTIBLE" />
+          <ScalarProperty Name="PRECIO_UNITARIO" ColumnName="PRECIO_UNITARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="REPEUSTO_PROVEEDOR" TypeName="ProyectoAgenciaModel.REPEUSTO_PROVEEDOR" StoreEntitySet="REPEUSTO_PROVEEDOR">
+      <EndProperty Name="PROVEEDOR">
+        <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+      </EndProperty>
+      <EndProperty Name="REPUESTO">
+        <ScalarProperty Name="ID_REPUESTO" ColumnName="ID_REPUESTO" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
