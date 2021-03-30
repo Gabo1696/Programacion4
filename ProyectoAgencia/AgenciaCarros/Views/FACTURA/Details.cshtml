@@ -1,0 +1,67 @@
+﻿@model AgenciaCarros.Models.FACTURA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FACTURA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UNIDADES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UNIDADES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMPORTE_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMPORTE_TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLIENTE.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLIENTE.NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REPUESTO.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REPUESTO.NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VEHICULO.MARCA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VEHICULO.MARCA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_FACTURA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

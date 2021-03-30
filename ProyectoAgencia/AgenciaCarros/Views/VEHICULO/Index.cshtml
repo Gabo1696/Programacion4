@@ -1,0 +1,76 @@
+﻿@model IEnumerable<AgenciaCarros.Models.VEHICULO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PLACA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MARCA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MODELO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CILINDRAJE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COLOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_COMBUSTIBLE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRECIO_UNITARIO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PLACA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MARCA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MODELO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CILINDRAJE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COLOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_COMBUSTIBLE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRECIO_UNITARIO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_VEHICULO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_VEHICULO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_VEHICULO })
+        </td>
+    </tr>
+}
+
+</table>

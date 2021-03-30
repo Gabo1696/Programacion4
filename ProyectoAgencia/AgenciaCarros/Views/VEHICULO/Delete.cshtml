@@ -1,0 +1,89 @@
+﻿@model AgenciaCarros.Models.VEHICULO
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>VEHICULO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PLACA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PLACA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MARCA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MARCA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MODELO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MODELO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CILINDRAJE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CILINDRAJE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COLOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COLOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_COMBUSTIBLE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_COMBUSTIBLE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRECIO_UNITARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRECIO_UNITARIO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

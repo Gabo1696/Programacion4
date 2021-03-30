@@ -1,0 +1,51 @@
+﻿@model AgenciaCarros.Models.INVENTARIO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>INVENTARIO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CANTIDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CANTIDAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ULTIMA_VENTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ULTIMA_VENTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REPUESTO.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REPUESTO.NOMBRE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_INVENTARIO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

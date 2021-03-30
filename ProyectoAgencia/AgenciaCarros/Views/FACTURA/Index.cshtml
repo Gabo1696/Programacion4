@@ -1,0 +1,64 @@
+﻿@model IEnumerable<AgenciaCarros.Models.FACTURA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UNIDADES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IMPORTE_TOTAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLIENTE.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REPUESTO.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VEHICULO.MARCA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UNIDADES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IMPORTE_TOTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLIENTE.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPUESTO.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VEHICULO.MARCA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_FACTURA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_FACTURA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_FACTURA })
+        </td>
+    </tr>
+}
+
+</table>

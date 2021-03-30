@@ -1,0 +1,52 @@
+﻿@model IEnumerable<AgenciaCarros.Models.INVENTARIO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CANTIDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VALOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ULTIMA_VENTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REPUESTO.NOMBRE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CANTIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VALOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ULTIMA_VENTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPUESTO.NOMBRE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_INVENTARIO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_INVENTARIO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_INVENTARIO })
+        </td>
+    </tr>
+}
+
+</table>

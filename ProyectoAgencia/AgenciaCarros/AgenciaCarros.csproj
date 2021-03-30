@@ -128,7 +128,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CLIENTEController.cs" />
+    <Compile Include="Controllers\EMPLEADOController.cs" />
+    <Compile Include="Controllers\FACTURAController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\INVENTARIOController.cs" />
+    <Compile Include="Controllers\PROVEEDORController.cs" />
+    <Compile Include="Controllers\REPUESTOController.cs" />
+    <Compile Include="Controllers\VEHICULOController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -249,6 +256,36 @@
     <Content Include="Views\EMPLEADO\Details.cshtml" />
     <Content Include="Views\EMPLEADO\Edit.cshtml" />
     <Content Include="Views\EMPLEADO\Index.cshtml" />
+    <Content Include="Views\VEHICULO\Create.cshtml" />
+    <Content Include="Views\VEHICULO\Delete.cshtml" />
+    <Content Include="Views\VEHICULO\Details.cshtml" />
+    <Content Include="Views\VEHICULO\Edit.cshtml" />
+    <Content Include="Views\VEHICULO\Index.cshtml" />
+    <Content Include="Views\CLIENTE\Create.cshtml" />
+    <Content Include="Views\CLIENTE\Delete.cshtml" />
+    <Content Include="Views\CLIENTE\Details.cshtml" />
+    <Content Include="Views\CLIENTE\Edit.cshtml" />
+    <Content Include="Views\CLIENTE\Index.cshtml" />
+    <Content Include="Views\INVENTARIO\Create.cshtml" />
+    <Content Include="Views\INVENTARIO\Delete.cshtml" />
+    <Content Include="Views\INVENTARIO\Details.cshtml" />
+    <Content Include="Views\INVENTARIO\Edit.cshtml" />
+    <Content Include="Views\INVENTARIO\Index.cshtml" />
+    <Content Include="Views\PROVEEDOR\Create.cshtml" />
+    <Content Include="Views\PROVEEDOR\Delete.cshtml" />
+    <Content Include="Views\PROVEEDOR\Details.cshtml" />
+    <Content Include="Views\PROVEEDOR\Edit.cshtml" />
+    <Content Include="Views\PROVEEDOR\Index.cshtml" />
+    <Content Include="Views\FACTURA\Create.cshtml" />
+    <Content Include="Views\FACTURA\Delete.cshtml" />
+    <Content Include="Views\FACTURA\Details.cshtml" />
+    <Content Include="Views\FACTURA\Edit.cshtml" />
+    <Content Include="Views\FACTURA\Index.cshtml" />
+    <Content Include="Views\REPUESTO\Create.cshtml" />
+    <Content Include="Views\REPUESTO\Delete.cshtml" />
+    <Content Include="Views\REPUESTO\Details.cshtml" />
+    <Content Include="Views\REPUESTO\Edit.cshtml" />
+    <Content Include="Views\REPUESTO\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
