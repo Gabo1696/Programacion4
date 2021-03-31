@@ -11,7 +11,8 @@ namespace AgenciaCarros.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class CLIENTE
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,7 +26,9 @@ namespace AgenciaCarros.Models
         public string NOMBRE { get; set; }
         public string APELLIDO1 { get; set; }
         public string APELLIDO2 { get; set; }
+        [EmailAddress]
         public string EMAIL { get; set; }
+        [StringLength(10, MinimumLength = 8)]
         public int TELEFONO { get; set; }
         public Nullable<int> ID_DIRECCION { get; set; }
     
