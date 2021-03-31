@@ -28,7 +28,6 @@ namespace AgenciaCarros.Models
         public string APELLIDO2 { get; set; }
         [EmailAddress]
         public string EMAIL { get; set; }
-        [StringLength(10, MinimumLength = 8)]
         public int TELEFONO { get; set; }
         public Nullable<int> ID_DIRECCION { get; set; }
     

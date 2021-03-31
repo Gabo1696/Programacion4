@@ -18,7 +18,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.Label("ID Vehiculo", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("ID VEHICULO", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ID_VEHICULO, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ID_VEHICULO, "", new { @class = "text-danger" })
@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            @Html.Label("Placa", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("PLACA", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.PLACA, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.PLACA, "", new { @class = "text-danger" })
@@ -34,7 +34,7 @@
         </div>
 
         <div class="form-group">
-            @Html.Label("Marca", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("MARCA", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.MARCA, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.MARCA, "", new { @class = "text-danger" })
@@ -42,7 +42,7 @@
         </div>
 
         <div class="form-group">
-            @Html.Label("Modelo", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("MODELO", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.MODELO, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.MODELO, "", new { @class = "text-danger" })
@@ -50,7 +50,7 @@
         </div>
 
         <div class="form-group">
-            @Html.Label("Año", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("AÑO", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.TextBoxFor(model => model.ANNO, new { @type = "date", @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ANNO, "", new { @class = "text-danger" })
@@ -58,7 +58,7 @@
         </div>
 
         <div class="form-group">
-            @Html.Label("Cilindraje", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("CILINDRAJE", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CILINDRAJE, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CILINDRAJE, "", new { @class = "text-danger" })
@@ -66,7 +66,7 @@
         </div>
 
         <div class="form-group">
-            @Html.Label("Color", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("COLOR", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.COLOR, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.COLOR, "", new { @class = "text-danger" })
@@ -74,7 +74,7 @@
         </div>
 
         <div class="form-group">
-            @Html.Label("Tipo combustible", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("COMBUSTIBLE", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.TIPO_COMBUSTIBLE, new SelectList(Enum.GetValues(typeof(TIPO_COMBUSTIBLE))),
             "Selecciona el tipo", new { @class = "form-control" })
@@ -83,7 +83,7 @@
         </div>
 
         <div class="form-group">
-            @Html.Label("Precio unitario", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("PRECIO UNITARIO", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.PRECIO_UNITARIO, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.PRECIO_UNITARIO, "", new { @class = "text-danger" })
