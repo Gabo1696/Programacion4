@@ -5,15 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>Borrar</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>¿Seguro que quiere borrar el vehiculo?</h3>
 <div>
     <h4>VEHICULO</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.PLACA)
+            @Html.DisplayName("PLACA")
         </dt>
 
         <dd>
@@ -21,7 +21,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MARCA)
+            @Html.DisplayName("MARCA")
         </dt>
 
         <dd>
@@ -29,7 +29,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MODELO)
+            @Html.DisplayName("MODELO")
         </dt>
 
         <dd>
@@ -37,7 +37,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ANNO)
+            @Html.DisplayName("AÑO")
         </dt>
 
         <dd>
@@ -45,7 +45,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CILINDRAJE)
+            @Html.DisplayName("CILINDRAJE")
         </dt>
 
         <dd>
@@ -53,7 +53,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.COLOR)
+            @Html.DisplayName("COLOR")
         </dt>
 
         <dd>
@@ -61,7 +61,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TIPO_COMBUSTIBLE)
+            @Html.DisplayName("COMBUSTIBLE")
         </dt>
 
         <dd>
@@ -69,7 +69,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PRECIO_UNITARIO)
+            @Html.DisplayName("PRECIO UNITARIO")
         </dt>
 
         <dd>
@@ -82,8 +82,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
         </div>
     }
 </div>
