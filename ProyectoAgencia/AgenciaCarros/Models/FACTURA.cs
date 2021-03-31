@@ -11,12 +11,18 @@ namespace AgenciaCarros.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class FACTURA
     {
+        [Required(ErrorMessage = "Campo Obligatorio")]
         public int ID_FACTURA { get; set; }
+        [Required(ErrorMessage = "Campo Obligatorio")]
         public System.DateTime FECHA { get; set; }
+        [Required(ErrorMessage = "Campo Obligatorio")]
         public int UNIDADES { get; set; }
+        [Required(ErrorMessage = "Campo Obligatorio")]
+
         public int IMPORTE_TOTAL { get; set; }
         public Nullable<int> ID_CLIENTE { get; set; }
         public Nullable<int> ID_REPUESTO { get; set; }
