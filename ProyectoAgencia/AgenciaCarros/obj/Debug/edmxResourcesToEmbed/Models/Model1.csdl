@@ -1,5 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ProyectoAgenciaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ProyectoAgenciaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CANTON" EntityType="ProyectoAgenciaModel.CANTON" />
+    <EntitySet Name="CLIENTE" EntityType="ProyectoAgenciaModel.CLIENTE" />
+    <EntitySet Name="DETALLE_DIRECCION" EntityType="ProyectoAgenciaModel.DETALLE_DIRECCION" />
+    <EntitySet Name="DISTRITO" EntityType="ProyectoAgenciaModel.DISTRITO" />
+    <EntitySet Name="EMPLEADO" EntityType="ProyectoAgenciaModel.EMPLEADO" />
+    <EntitySet Name="FACTURA" EntityType="ProyectoAgenciaModel.FACTURA" />
+    <EntitySet Name="INGRESO" EntityType="ProyectoAgenciaModel.INGRESO" />
+    <EntitySet Name="INVENTARIO" EntityType="ProyectoAgenciaModel.INVENTARIO" />
+    <EntitySet Name="PROVEEDOR" EntityType="ProyectoAgenciaModel.PROVEEDOR" />
+    <EntitySet Name="PROVINCIA" EntityType="ProyectoAgenciaModel.PROVINCIA" />
+    <EntitySet Name="REPUESTO" EntityType="ProyectoAgenciaModel.REPUESTO" />
+    <EntitySet Name="ROL" EntityType="ProyectoAgenciaModel.ROL" />
+    <EntitySet Name="sysdiagrams" EntityType="ProyectoAgenciaModel.sysdiagrams" />
+    <EntitySet Name="VEHICULO" EntityType="ProyectoAgenciaModel.VEHICULO" />
+    <AssociationSet Name="R_3" Association="ProyectoAgenciaModel.R_3">
+      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+      <End Role="CANTON" EntitySet="CANTON" />
+    </AssociationSet>
+    <AssociationSet Name="R_4" Association="ProyectoAgenciaModel.R_4">
+      <End Role="CANTON" EntitySet="CANTON" />
+      <End Role="DISTRITO" EntitySet="DISTRITO" />
+    </AssociationSet>
+    <AssociationSet Name="R_6" Association="ProyectoAgenciaModel.R_6">
+      <End Role="CANTON" EntitySet="CANTON" />
+      <End Role="DETALLE_DIRECCION" EntitySet="DETALLE_DIRECCION" />
+    </AssociationSet>
+    <AssociationSet Name="R_2" Association="ProyectoAgenciaModel.R_2">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="INGRESO" EntitySet="INGRESO" />
+    </AssociationSet>
+    <AssociationSet Name="R_8" Association="ProyectoAgenciaModel.R_8">
+      <End Role="DETALLE_DIRECCION" EntitySet="DETALLE_DIRECCION" />
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="R_9" Association="ProyectoAgenciaModel.R_9">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="FACTURA" EntitySet="FACTURA" />
+    </AssociationSet>
+    <AssociationSet Name="R_5" Association="ProyectoAgenciaModel.R_5">
+      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+      <End Role="DETALLE_DIRECCION" EntitySet="DETALLE_DIRECCION" />
+    </AssociationSet>
+    <AssociationSet Name="R_7" Association="ProyectoAgenciaModel.R_7">
+      <End Role="DISTRITO" EntitySet="DISTRITO" />
+      <End Role="DETALLE_DIRECCION" EntitySet="DETALLE_DIRECCION" />
+    </AssociationSet>
+    <AssociationSet Name="R_13" Association="ProyectoAgenciaModel.R_13">
+      <End Role="ROL" EntitySet="ROL" />
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+    </AssociationSet>
+    <AssociationSet Name="R_10" Association="ProyectoAgenciaModel.R_10">
+      <End Role="REPUESTO" EntitySet="REPUESTO" />
+      <End Role="FACTURA" EntitySet="FACTURA" />
+    </AssociationSet>
+    <AssociationSet Name="R_11" Association="ProyectoAgenciaModel.R_11">
+      <End Role="VEHICULO" EntitySet="VEHICULO" />
+      <End Role="FACTURA" EntitySet="FACTURA" />
+    </AssociationSet>
+    <AssociationSet Name="R_12" Association="ProyectoAgenciaModel.R_12">
+      <End Role="REPUESTO" EntitySet="REPUESTO" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="REPEUSTO_PROVEEDOR" Association="ProyectoAgenciaModel.REPEUSTO_PROVEEDOR">
+      <End Role="PROVEEDOR" EntitySet="PROVEEDOR" />
+      <End Role="REPUESTO" EntitySet="REPUESTO" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="CANTON">
     <Key>
       <PropertyRef Name="ID_CANTON" />
@@ -7,9 +75,9 @@
     <Property Name="ID_CANTON" Type="Int32" Nullable="false" />
     <Property Name="NOMBRE_CANTON" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ID_PROVINCIA" Type="Int32" />
-    <NavigationProperty Name="PROVINCIA" Relationship="Self.R_3" FromRole="CANTON" ToRole="PROVINCIA" />
-    <NavigationProperty Name="DISTRITO" Relationship="Self.R_4" FromRole="CANTON" ToRole="DISTRITO" />
-    <NavigationProperty Name="DETALLE_DIRECCION" Relationship="Self.R_6" FromRole="CANTON" ToRole="DETALLE_DIRECCION" />
+    <NavigationProperty Name="PROVINCIA" Relationship="ProyectoAgenciaModel.R_3" FromRole="CANTON" ToRole="PROVINCIA" />
+    <NavigationProperty Name="DISTRITO" Relationship="ProyectoAgenciaModel.R_4" FromRole="CANTON" ToRole="DISTRITO" />
+    <NavigationProperty Name="DETALLE_DIRECCION" Relationship="ProyectoAgenciaModel.R_6" FromRole="CANTON" ToRole="DETALLE_DIRECCION" />
   </EntityType>
   <EntityType Name="CLIENTE">
     <Key>
@@ -17,53 +85,53 @@
     </Key>
     <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" />
     <Property Name="CEDULA" Type="Int32" Nullable="false" />
-    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="APELLIDO1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="APELLIDO2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="EMAIL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="TELEFONO" Type="Int32" Nullable="false" />
     <Property Name="ID_DIRECCION" Type="Int32" />
-    <NavigationProperty Name="INGRESO" Relationship="Self.R_2" FromRole="CLIENTE" ToRole="INGRESO" />
-    <NavigationProperty Name="DETALLE_DIRECCION" Relationship="Self.R_8" FromRole="CLIENTE" ToRole="DETALLE_DIRECCION" />
-    <NavigationProperty Name="FACTURA" Relationship="Self.R_9" FromRole="CLIENTE" ToRole="FACTURA" />
+    <NavigationProperty Name="INGRESO" Relationship="ProyectoAgenciaModel.R_2" FromRole="CLIENTE" ToRole="INGRESO" />
+    <NavigationProperty Name="DETALLE_DIRECCION" Relationship="ProyectoAgenciaModel.R_8" FromRole="CLIENTE" ToRole="DETALLE_DIRECCION" />
+    <NavigationProperty Name="FACTURA" Relationship="ProyectoAgenciaModel.R_9" FromRole="CLIENTE" ToRole="FACTURA" />
   </EntityType>
   <EntityType Name="DETALLE_DIRECCION">
     <Key>
       <PropertyRef Name="ID_DIRECCION" />
     </Key>
     <Property Name="ID_DIRECCION" Type="Int32" Nullable="false" />
-    <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ID_PROVINCIA" Type="Int32" />
     <Property Name="ID_CANTON" Type="Int32" />
     <Property Name="ID_DISTRITO" Type="Int32" />
-    <NavigationProperty Name="CANTON" Relationship="Self.R_6" FromRole="DETALLE_DIRECCION" ToRole="CANTON" />
-    <NavigationProperty Name="CLIENTE" Relationship="Self.R_8" FromRole="DETALLE_DIRECCION" ToRole="CLIENTE" />
-    <NavigationProperty Name="PROVINCIA" Relationship="Self.R_5" FromRole="DETALLE_DIRECCION" ToRole="PROVINCIA" />
-    <NavigationProperty Name="DISTRITO" Relationship="Self.R_7" FromRole="DETALLE_DIRECCION" ToRole="DISTRITO" />
+    <NavigationProperty Name="CANTON" Relationship="ProyectoAgenciaModel.R_6" FromRole="DETALLE_DIRECCION" ToRole="CANTON" />
+    <NavigationProperty Name="CLIENTE" Relationship="ProyectoAgenciaModel.R_8" FromRole="DETALLE_DIRECCION" ToRole="CLIENTE" />
+    <NavigationProperty Name="PROVINCIA" Relationship="ProyectoAgenciaModel.R_5" FromRole="DETALLE_DIRECCION" ToRole="PROVINCIA" />
+    <NavigationProperty Name="DISTRITO" Relationship="ProyectoAgenciaModel.R_7" FromRole="DETALLE_DIRECCION" ToRole="DISTRITO" />
   </EntityType>
   <EntityType Name="DISTRITO">
     <Key>
       <PropertyRef Name="ID_DISTRITO" />
     </Key>
     <Property Name="ID_DISTRITO" Type="Int32" Nullable="false" />
-    <Property Name="NOMBRE_DISTRITO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE_DISTRITO" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ID_CANTON" Type="Int32" />
-    <NavigationProperty Name="CANTON" Relationship="Self.R_4" FromRole="DISTRITO" ToRole="CANTON" />
-    <NavigationProperty Name="DETALLE_DIRECCION" Relationship="Self.R_7" FromRole="DISTRITO" ToRole="DETALLE_DIRECCION" />
+    <NavigationProperty Name="CANTON" Relationship="ProyectoAgenciaModel.R_4" FromRole="DISTRITO" ToRole="CANTON" />
+    <NavigationProperty Name="DETALLE_DIRECCION" Relationship="ProyectoAgenciaModel.R_7" FromRole="DISTRITO" ToRole="DETALLE_DIRECCION" />
   </EntityType>
   <EntityType Name="EMPLEADO">
     <Key>
       <PropertyRef Name="ID_EMPLEADO" />
     </Key>
     <Property Name="ID_EMPLEADO" Type="Int32" Nullable="false" />
-    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="APELLIDO1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="APELLIDO2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="TELEFONO" Type="Int32" Nullable="false" />
-    <Property Name="EMAIL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="SALARIO" Type="Int32" Nullable="false" />
     <Property Name="ID_ROL" Type="Int32" />
-    <NavigationProperty Name="ROL" Relationship="Self.R_13" FromRole="EMPLEADO" ToRole="ROL" />
+    <NavigationProperty Name="ROL" Relationship="ProyectoAgenciaModel.R_13" FromRole="EMPLEADO" ToRole="ROL" />
   </EntityType>
   <EntityType Name="FACTURA">
     <Key>
@@ -71,23 +139,22 @@
     </Key>
     <Property Name="ID_FACTURA" Type="Int32" Nullable="false" />
     <Property Name="FECHA" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="UNIDADES" Type="Int32" Nullable="false" />
     <Property Name="IMPORTE_TOTAL" Type="Int32" Nullable="false" />
     <Property Name="ID_CLIENTE" Type="Int32" />
     <Property Name="ID_REPUESTO" Type="Int32" />
     <Property Name="ID_VEHICULO" Type="Int32" />
-    <NavigationProperty Name="CLIENTE" Relationship="Self.R_9" FromRole="FACTURA" ToRole="CLIENTE" />
-    <NavigationProperty Name="REPUESTO" Relationship="Self.R_10" FromRole="FACTURA" ToRole="REPUESTO" />
-    <NavigationProperty Name="VEHICULO" Relationship="Self.R_11" FromRole="FACTURA" ToRole="VEHICULO" />
+    <NavigationProperty Name="CLIENTE" Relationship="ProyectoAgenciaModel.R_9" FromRole="FACTURA" ToRole="CLIENTE" />
+    <NavigationProperty Name="REPUESTO" Relationship="ProyectoAgenciaModel.R_10" FromRole="FACTURA" ToRole="REPUESTO" />
+    <NavigationProperty Name="VEHICULO" Relationship="ProyectoAgenciaModel.R_11" FromRole="FACTURA" ToRole="VEHICULO" />
   </EntityType>
   <EntityType Name="INGRESO">
     <Key>
       <PropertyRef Name="ID_CLIENTE" />
     </Key>
     <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" />
-    <Property Name="USUARIO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="CONTRASENA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="CLIENTE" Relationship="Self.R_2" FromRole="INGRESO" ToRole="CLIENTE" />
+    <Property Name="USUARIO" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CONTRASENA" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CLIENTE" Relationship="ProyectoAgenciaModel.R_2" FromRole="INGRESO" ToRole="CLIENTE" />
   </EntityType>
   <EntityType Name="INVENTARIO">
     <Key>
@@ -98,7 +165,7 @@
     <Property Name="VALOR" Type="Int32" Nullable="false" />
     <Property Name="ULTIMA_VENTA" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="ID_REPUESTO" Type="Int32" />
-    <NavigationProperty Name="REPUESTO" Relationship="Self.R_12" FromRole="INVENTARIO" ToRole="REPUESTO" />
+    <NavigationProperty Name="REPUESTO" Relationship="ProyectoAgenciaModel.R_12" FromRole="INVENTARIO" ToRole="REPUESTO" />
   </EntityType>
   <EntityType Name="PROVEEDOR">
     <Key>
@@ -106,8 +173,8 @@
     </Key>
     <Property Name="ID_PROVEEDOR" Type="Int32" Nullable="false" />
     <Property Name="NOMBRE_PROVEEDOR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="DESCRIPCION_PROVEEDOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="REPUESTO" Relationship="Self.REPEUSTO_PROVEEDOR" FromRole="PROVEEDOR" ToRole="REPUESTO" />
+    <Property Name="DESCRIPCION_PROVEEDOR" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="REPUESTO" Relationship="ProyectoAgenciaModel.REPEUSTO_PROVEEDOR" FromRole="PROVEEDOR" ToRole="REPUESTO" />
   </EntityType>
   <EntityType Name="PROVINCIA">
     <Key>
@@ -115,34 +182,34 @@
     </Key>
     <Property Name="ID_PROVINCIA" Type="Int32" Nullable="false" />
     <Property Name="NOMBRE_PROVINCIA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="CANTON" Relationship="Self.R_3" FromRole="PROVINCIA" ToRole="CANTON" />
-    <NavigationProperty Name="DETALLE_DIRECCION" Relationship="Self.R_5" FromRole="PROVINCIA" ToRole="DETALLE_DIRECCION" />
+    <NavigationProperty Name="CANTON" Relationship="ProyectoAgenciaModel.R_3" FromRole="PROVINCIA" ToRole="CANTON" />
+    <NavigationProperty Name="DETALLE_DIRECCION" Relationship="ProyectoAgenciaModel.R_5" FromRole="PROVINCIA" ToRole="DETALLE_DIRECCION" />
   </EntityType>
   <EntityType Name="REPUESTO">
     <Key>
       <PropertyRef Name="ID_REPUESTO" />
     </Key>
     <Property Name="ID_REPUESTO" Type="Int32" Nullable="false" />
-    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="PRECIO_UNITARIO" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="FACTURA" Relationship="Self.R_10" FromRole="REPUESTO" ToRole="FACTURA" />
-    <NavigationProperty Name="INVENTARIO" Relationship="Self.R_12" FromRole="REPUESTO" ToRole="INVENTARIO" />
-    <NavigationProperty Name="PROVEEDOR" Relationship="Self.REPEUSTO_PROVEEDOR" FromRole="REPUESTO" ToRole="PROVEEDOR" />
+    <NavigationProperty Name="FACTURA" Relationship="ProyectoAgenciaModel.R_10" FromRole="REPUESTO" ToRole="FACTURA" />
+    <NavigationProperty Name="INVENTARIO" Relationship="ProyectoAgenciaModel.R_12" FromRole="REPUESTO" ToRole="INVENTARIO" />
+    <NavigationProperty Name="PROVEEDOR" Relationship="ProyectoAgenciaModel.REPEUSTO_PROVEEDOR" FromRole="REPUESTO" ToRole="PROVEEDOR" />
   </EntityType>
   <EntityType Name="ROL">
     <Key>
       <PropertyRef Name="ID_ROL" />
     </Key>
     <Property Name="ID_ROL" Type="Int32" Nullable="false" />
-    <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="EMPLEADO" Relationship="Self.R_13" FromRole="ROL" ToRole="EMPLEADO" />
+    <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EMPLEADO" Relationship="ProyectoAgenciaModel.R_13" FromRole="ROL" ToRole="EMPLEADO" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
     <Property Name="principal_id" Type="Int32" Nullable="false" />
     <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="version" Type="Int32" />
@@ -154,18 +221,18 @@
     </Key>
     <Property Name="ID_VEHICULO" Type="Int32" Nullable="false" />
     <Property Name="PLACA" Type="Int32" Nullable="false" />
-    <Property Name="MARCA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="MODELO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ANNO" Type="DateTime" Precision="3" />
+    <Property Name="MARCA" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MODELO" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="CILINDRAJE" Type="Int32" Nullable="false" />
-    <Property Name="COLOR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="TIPO_COMBUSTIBLE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COLOR" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO_COMBUSTIBLE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="PRECIO_UNITARIO" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="FACTURA" Relationship="Self.R_11" FromRole="VEHICULO" ToRole="FACTURA" />
+    <Property Name="ANNO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FACTURA" Relationship="ProyectoAgenciaModel.R_11" FromRole="VEHICULO" ToRole="FACTURA" />
   </EntityType>
   <Association Name="R_3">
-    <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="0..1" />
-    <End Role="CANTON" Type="Self.CANTON" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.PROVINCIA" Role="PROVINCIA" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.CANTON" Role="CANTON" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PROVINCIA">
         <PropertyRef Name="ID_PROVINCIA" />
@@ -176,8 +243,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="R_4">
-    <End Role="CANTON" Type="Self.CANTON" Multiplicity="0..1" />
-    <End Role="DISTRITO" Type="Self.DISTRITO" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.CANTON" Role="CANTON" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.DISTRITO" Role="DISTRITO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CANTON">
         <PropertyRef Name="ID_CANTON" />
@@ -188,8 +255,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="R_6">
-    <End Role="CANTON" Type="Self.CANTON" Multiplicity="0..1" />
-    <End Role="DETALLE_DIRECCION" Type="Self.DETALLE_DIRECCION" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.CANTON" Role="CANTON" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.DETALLE_DIRECCION" Role="DETALLE_DIRECCION" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CANTON">
         <PropertyRef Name="ID_CANTON" />
@@ -200,8 +267,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="R_2">
-    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
-    <End Role="INGRESO" Type="Self.INGRESO" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.CLIENTE" Role="CLIENTE" Multiplicity="1" />
+    <End Type="ProyectoAgenciaModel.INGRESO" Role="INGRESO" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="CLIENTE">
         <PropertyRef Name="ID_CLIENTE" />
@@ -212,8 +279,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="R_8">
-    <End Role="DETALLE_DIRECCION" Type="Self.DETALLE_DIRECCION" Multiplicity="0..1" />
-    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.DETALLE_DIRECCION" Role="DETALLE_DIRECCION" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.CLIENTE" Role="CLIENTE" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DETALLE_DIRECCION">
         <PropertyRef Name="ID_DIRECCION" />
@@ -224,8 +291,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="R_9">
-    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
-    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.CLIENTE" Role="CLIENTE" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.FACTURA" Role="FACTURA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CLIENTE">
         <PropertyRef Name="ID_CLIENTE" />
@@ -236,8 +303,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="R_5">
-    <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="0..1" />
-    <End Role="DETALLE_DIRECCION" Type="Self.DETALLE_DIRECCION" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.PROVINCIA" Role="PROVINCIA" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.DETALLE_DIRECCION" Role="DETALLE_DIRECCION" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PROVINCIA">
         <PropertyRef Name="ID_PROVINCIA" />
@@ -248,8 +315,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="R_7">
-    <End Role="DISTRITO" Type="Self.DISTRITO" Multiplicity="0..1" />
-    <End Role="DETALLE_DIRECCION" Type="Self.DETALLE_DIRECCION" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.DISTRITO" Role="DISTRITO" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.DETALLE_DIRECCION" Role="DETALLE_DIRECCION" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DISTRITO">
         <PropertyRef Name="ID_DISTRITO" />
@@ -260,8 +327,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="R_13">
-    <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
-    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.ROL" Role="ROL" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.EMPLEADO" Role="EMPLEADO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ROL">
         <PropertyRef Name="ID_ROL" />
@@ -272,8 +339,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="R_10">
-    <End Role="REPUESTO" Type="Self.REPUESTO" Multiplicity="0..1" />
-    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.REPUESTO" Role="REPUESTO" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.FACTURA" Role="FACTURA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="REPUESTO">
         <PropertyRef Name="ID_REPUESTO" />
@@ -284,8 +351,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="R_11">
-    <End Role="VEHICULO" Type="Self.VEHICULO" Multiplicity="0..1" />
-    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.VEHICULO" Role="VEHICULO" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.FACTURA" Role="FACTURA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="VEHICULO">
         <PropertyRef Name="ID_VEHICULO" />
@@ -296,8 +363,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="R_12">
-    <End Role="REPUESTO" Type="Self.REPUESTO" Multiplicity="0..1" />
-    <End Role="INVENTARIO" Type="Self.INVENTARIO" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.REPUESTO" Role="REPUESTO" Multiplicity="0..1" />
+    <End Type="ProyectoAgenciaModel.INVENTARIO" Role="INVENTARIO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="REPUESTO">
         <PropertyRef Name="ID_REPUESTO" />
@@ -308,75 +375,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="REPEUSTO_PROVEEDOR">
-    <End Role="PROVEEDOR" Type="Self.PROVEEDOR" Multiplicity="*" />
-    <End Role="REPUESTO" Type="Self.REPUESTO" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.PROVEEDOR" Role="PROVEEDOR" Multiplicity="*" />
+    <End Type="ProyectoAgenciaModel.REPUESTO" Role="REPUESTO" Multiplicity="*" />
   </Association>
-  <EntityContainer Name="ProyectoAgenciaEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="CANTON" EntityType="Self.CANTON" />
-    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
-    <EntitySet Name="DETALLE_DIRECCION" EntityType="Self.DETALLE_DIRECCION" />
-    <EntitySet Name="DISTRITO" EntityType="Self.DISTRITO" />
-    <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" />
-    <EntitySet Name="FACTURA" EntityType="Self.FACTURA" />
-    <EntitySet Name="INGRESO" EntityType="Self.INGRESO" />
-    <EntitySet Name="INVENTARIO" EntityType="Self.INVENTARIO" />
-    <EntitySet Name="PROVEEDOR" EntityType="Self.PROVEEDOR" />
-    <EntitySet Name="PROVINCIA" EntityType="Self.PROVINCIA" />
-    <EntitySet Name="REPUESTO" EntityType="Self.REPUESTO" />
-    <EntitySet Name="ROL" EntityType="Self.ROL" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="VEHICULO" EntityType="Self.VEHICULO" />
-    <AssociationSet Name="R_3" Association="Self.R_3">
-      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
-      <End Role="CANTON" EntitySet="CANTON" />
-    </AssociationSet>
-    <AssociationSet Name="R_4" Association="Self.R_4">
-      <End Role="CANTON" EntitySet="CANTON" />
-      <End Role="DISTRITO" EntitySet="DISTRITO" />
-    </AssociationSet>
-    <AssociationSet Name="R_6" Association="Self.R_6">
-      <End Role="CANTON" EntitySet="CANTON" />
-      <End Role="DETALLE_DIRECCION" EntitySet="DETALLE_DIRECCION" />
-    </AssociationSet>
-    <AssociationSet Name="R_2" Association="Self.R_2">
-      <End Role="CLIENTE" EntitySet="CLIENTE" />
-      <End Role="INGRESO" EntitySet="INGRESO" />
-    </AssociationSet>
-    <AssociationSet Name="R_8" Association="Self.R_8">
-      <End Role="DETALLE_DIRECCION" EntitySet="DETALLE_DIRECCION" />
-      <End Role="CLIENTE" EntitySet="CLIENTE" />
-    </AssociationSet>
-    <AssociationSet Name="R_9" Association="Self.R_9">
-      <End Role="CLIENTE" EntitySet="CLIENTE" />
-      <End Role="FACTURA" EntitySet="FACTURA" />
-    </AssociationSet>
-    <AssociationSet Name="R_5" Association="Self.R_5">
-      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
-      <End Role="DETALLE_DIRECCION" EntitySet="DETALLE_DIRECCION" />
-    </AssociationSet>
-    <AssociationSet Name="R_7" Association="Self.R_7">
-      <End Role="DISTRITO" EntitySet="DISTRITO" />
-      <End Role="DETALLE_DIRECCION" EntitySet="DETALLE_DIRECCION" />
-    </AssociationSet>
-    <AssociationSet Name="R_13" Association="Self.R_13">
-      <End Role="ROL" EntitySet="ROL" />
-      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
-    </AssociationSet>
-    <AssociationSet Name="R_10" Association="Self.R_10">
-      <End Role="REPUESTO" EntitySet="REPUESTO" />
-      <End Role="FACTURA" EntitySet="FACTURA" />
-    </AssociationSet>
-    <AssociationSet Name="R_11" Association="Self.R_11">
-      <End Role="VEHICULO" EntitySet="VEHICULO" />
-      <End Role="FACTURA" EntitySet="FACTURA" />
-    </AssociationSet>
-    <AssociationSet Name="R_12" Association="Self.R_12">
-      <End Role="REPUESTO" EntitySet="REPUESTO" />
-      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
-    </AssociationSet>
-    <AssociationSet Name="REPEUSTO_PROVEEDOR" Association="Self.REPEUSTO_PROVEEDOR">
-      <End Role="PROVEEDOR" EntitySet="PROVEEDOR" />
-      <End Role="REPUESTO" EntitySet="REPUESTO" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>

@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>CLIENTES REGISTRADO</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ingresar nuevo cliente", "Create")
 </p>
 <table class="table">
     <tr>
@@ -19,10 +19,10 @@
             @Html.DisplayNameFor(model => model.NOMBRE)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.APELLIDO1)
+            @Html.DisplayName("PRIMER APELLIDO")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.APELLIDO2)
+            @Html.DisplayName("SEGUNDO APELLIDO")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EMAIL)
@@ -66,9 +66,9 @@
             @Html.DisplayFor(modelItem => item.DETALLE_DIRECCION.DESCRIPCION)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_CLIENTE }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_CLIENTE }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_CLIENTE })
+            @Html.ActionLink("EDITAR", "Edit", new { id=item.ID_CLIENTE }) |
+            @Html.ActionLink("DETALLES", "Details", new { id=item.ID_CLIENTE }) |
+            @Html.ActionLink("ELIMINAR", "Delete", new { id=item.ID_CLIENTE })
         </td>
     </tr>
 }

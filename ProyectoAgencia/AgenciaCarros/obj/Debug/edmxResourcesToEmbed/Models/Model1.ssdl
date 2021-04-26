@@ -48,7 +48,7 @@
     <Property Name="APELLIDO1" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="APELLIDO2" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="TELEFONO" Type="int" Nullable="false" />
-    <Property Name="EMAIL" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
     <Property Name="SALARIO" Type="int" Nullable="false" />
     <Property Name="ID_ROL" Type="int" />
   </EntityType>
@@ -58,7 +58,6 @@
     </Key>
     <Property Name="ID_FACTURA" Type="int" Nullable="false" />
     <Property Name="FECHA" Type="datetime" Nullable="false" />
-    <Property Name="UNIDADES" Type="int" Nullable="false" />
     <Property Name="IMPORTE_TOTAL" Type="int" Nullable="false" />
     <Property Name="ID_CLIENTE" Type="int" />
     <Property Name="ID_REPUESTO" Type="int" />
@@ -139,11 +138,11 @@
     <Property Name="PLACA" Type="int" Nullable="false" />
     <Property Name="MARCA" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="MODELO" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="ANNO" Type="datetime" />
     <Property Name="CILINDRAJE" Type="int" Nullable="false" />
     <Property Name="COLOR" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="TIPO_COMBUSTIBLE" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="PRECIO_UNITARIO" Type="int" Nullable="false" />
+    <Property Name="ANNO" Type="varchar" MaxLength="5" />
   </EntityType>
   <Association Name="R_10">
     <End Role="REPUESTO" Type="Self.REPUESTO" Multiplicity="0..1" />

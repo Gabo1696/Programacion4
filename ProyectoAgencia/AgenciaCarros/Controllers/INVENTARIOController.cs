@@ -114,9 +114,19 @@ namespace AgenciaCarros.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            INVENTARIO iNVENTARIO = db.INVENTARIO.Find(id);
-            db.INVENTARIO.Remove(iNVENTARIO);
-            db.SaveChanges();
+
+            try
+            {
+                INVENTARIO iNVENTARIO = db.INVENTARIO.Find(id);
+                db.INVENTARIO.Remove(iNVENTARIO);
+                db.SaveChanges();
+                
+            }
+            catch(Exception e) {
+                ViewData["data"] = "No se puede borrar porque existe un repuesto asociado";
+                return View("Delete");
+               
+            }
             return RedirectToAction("Index");
         }
 

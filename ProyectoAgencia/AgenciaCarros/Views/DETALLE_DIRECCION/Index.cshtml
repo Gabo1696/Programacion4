@@ -1,0 +1,52 @@
+﻿@model IEnumerable<AgenciaCarros.Models.DETALLE_DIRECCION>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CANTON.NOMBRE_CANTON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROVINCIA.NOMBRE_PROVINCIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DISTRITO.NOMBRE_DISTRITO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CANTON.NOMBRE_CANTON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROVINCIA.NOMBRE_PROVINCIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DISTRITO.NOMBRE_DISTRITO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_DIRECCION }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_DIRECCION }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_DIRECCION })
+        </td>
+    </tr>
+}
+
+</table>

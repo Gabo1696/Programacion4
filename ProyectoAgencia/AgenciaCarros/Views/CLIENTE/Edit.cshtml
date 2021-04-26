@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>MODIFICAR CLIENTE</h2>
 
 @using (Html.BeginForm())
 {
@@ -34,7 +34,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.APELLIDO1, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("PRIMER APELLIDO", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.APELLIDO1, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.APELLIDO1, "", new { @class = "text-danger" })
@@ -42,7 +42,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.APELLIDO2, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("SEGUNDO APELLIDO", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.APELLIDO2, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.APELLIDO2, "", new { @class = "text-danger" })
@@ -66,7 +66,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ID_DIRECCION, "ID_DIRECCION", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ID_DIRECCION, "DIRECCION", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("ID_DIRECCION", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ID_DIRECCION, "", new { @class = "text-danger" })
@@ -75,12 +75,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="GUARDAR" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("REGRESAR", "Index")
 </div>

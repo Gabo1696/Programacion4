@@ -4,34 +4,34 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="756879d0edca4968986d35a7abd432f1" Name="Diagram1">
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.CANTON" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.CLIENTE" Width="1.5" PointX="9.75" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.DETALLE_DIRECCION" Width="1.5" PointX="7.5" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.DISTRITO" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.EMPLEADO" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.FACTURA" Width="1.5" PointX="12" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.INGRESO" Width="1.5" PointX="12" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.INVENTARIO" Width="1.5" PointX="12" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.PROVEEDOR" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.PROVINCIA" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.REPUESTO" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.ROL" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoAgenciaModel.VEHICULO" Width="1.5" PointX="9.75" PointY="10.875" IsExpanded="true" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_3" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_4" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_6" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_2" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_8" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_9" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_5" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_7" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_13" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_10" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_11" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.R_12" ManuallyRouted="false" />
-        <AssociationConnector Association="ProyectoAgenciaModel.REPEUSTO_PROVEEDOR" ManuallyRouted="false" />
+      <Diagram DiagramId="756879d0edca4968986d35a7abd432f1" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.CANTON" Width="1.5" PointX="3.125" PointY="2.625" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.CLIENTE" Width="1.5" PointX="9.875" PointY="2.125" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.DETALLE_DIRECCION" Width="1.5" PointX="7.625" PointY="2.375" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.DISTRITO" Width="1.5" PointX="5.375" PointY="2.75" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.EMPLEADO" Width="1.5" PointX="3.125" PointY="6" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.FACTURA" Width="1.5" PointX="12.125" PointY="2.375" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.INGRESO" Width="1.5" PointX="12.125" PointY="6.375" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.INVENTARIO" Width="1.5" PointX="12.125" PointY="11.25" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.PROVEEDOR" Width="1.5" PointX="7.625" PointY="11.375" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.PROVINCIA" Width="1.5" PointX="0.875" PointY="2.875" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.REPUESTO" Width="1.5" PointX="9.875" PointY="11.125" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.ROL" Width="1.5" PointX="0.875" PointY="6.5" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.sysdiagrams" Width="1.5" PointX="5.875" PointY="6.75" />
+        <EntityTypeShape EntityType="ProyectoAgenciaModel.VEHICULO" Width="1.5" PointX="9.875" PointY="7.375" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_3" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_4" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_6" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_2" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_8" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_9" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_5" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_7" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_13" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_10" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_11" />
+        <AssociationConnector Association="ProyectoAgenciaModel.R_12" />
+        <AssociationConnector Association="ProyectoAgenciaModel.REPEUSTO_PROVEEDOR" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>DETALLES DEL CLIENTE</h2>
 
 <div>
     <h4>CLIENTE</h4>
@@ -28,7 +28,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.APELLIDO1)
+            @Html.DisplayName("PRIMER APELLIDO")
         </dt>
 
         <dd>
@@ -36,7 +36,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.APELLIDO2)
+            @Html.DisplayName("SEGUNDO APELLIDO")
         </dt>
 
         <dd>
@@ -78,6 +78,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_CLIENTE }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("EDITAR", "Edit", new { id = Model.ID_CLIENTE }) |
+    @Html.ActionLink("REGRESAR", "Index")
 </p>

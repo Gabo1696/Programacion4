@@ -11,8 +11,7 @@ namespace AgenciaCarros.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class CLIENTE
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,26 +19,16 @@ namespace AgenciaCarros.Models
         {
             this.FACTURA = new HashSet<FACTURA>();
         }
-        [Required(ErrorMessage = "Campo Obligatorio")]
+    
         public int ID_CLIENTE { get; set; }
-        [Required(ErrorMessage = "Campo Obligatorio")]
         public int CEDULA { get; set; }
-        [Required(ErrorMessage = "Campo Obligatorio")]
         public string NOMBRE { get; set; }
-        [Required(ErrorMessage = "Campo Obligatorio")]
         public string APELLIDO1 { get; set; }
-        [Required(ErrorMessage = "Campo Obligatorio")]
         public string APELLIDO2 { get; set; }
-        [Required(ErrorMessage = "Campo Obligatorio")]
-
-        [EmailAddress]
         public string EMAIL { get; set; }
-        [Required(ErrorMessage = "Campo Obligatorio")]
-        [Range(8, 10, ErrorMessage = "Debe digitar entre 8 a 10 numeros")]
         public int TELEFONO { get; set; }
-
         public Nullable<int> ID_DIRECCION { get; set; }
-
+    
         public virtual INGRESO INGRESO { get; set; }
         public virtual DETALLE_DIRECCION DETALLE_DIRECCION { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

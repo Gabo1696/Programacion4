@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>CREAR FACTURA</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -31,13 +31,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.Label("UNIDADES", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.UNIDADES, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UNIDADES, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        
 
         <div class="form-group">
             @Html.Label("IMPORTE TOTAL", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -73,12 +67,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="CREAR" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("REGRESAR", "Index")
 </div>

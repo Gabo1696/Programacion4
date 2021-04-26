@@ -5,9 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>ELIMINAR FACTURA</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Esta seguro que desea eliminar esta factura?</h3>
 <div>
     <h4>FACTURA</h4>
     <hr />
@@ -20,13 +20,7 @@
             @Html.DisplayFor(model => model.FECHA)
         </dd>
 
-        <dt>
-            @Html.DisplayName("UNIDADES")
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UNIDADES)
-        </dd>
+        
 
         <dt>
             @Html.DisplayName("IMPOTE TOTAL")
@@ -66,8 +60,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Volver", "Index")
+            <input type="submit" value="ELIMINAR" class="btn btn-default" /> |
+            @Html.ActionLink("REGRESAR", "Index")
         </div>
     }
 </div>

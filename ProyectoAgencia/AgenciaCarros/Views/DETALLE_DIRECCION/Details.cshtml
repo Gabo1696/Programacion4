@@ -1,0 +1,51 @@
+﻿@model AgenciaCarros.Models.DETALLE_DIRECCION
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DETALLE_DIRECCION</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CANTON.NOMBRE_CANTON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CANTON.NOMBRE_CANTON)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROVINCIA.NOMBRE_PROVINCIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROVINCIA.NOMBRE_PROVINCIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DISTRITO.NOMBRE_DISTRITO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DISTRITO.NOMBRE_DISTRITO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_DIRECCION }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

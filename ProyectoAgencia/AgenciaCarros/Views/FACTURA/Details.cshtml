@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>DETALLES FACTURA</h2>
 
 <div>
     <h4>FACTURA</h4>
@@ -19,16 +19,10 @@
             @Html.DisplayFor(model => model.FECHA)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.UNIDADES)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UNIDADES)
-        </dd>
+        
 
         <dt>
-            @Html.DisplayNameFor(model => model.IMPORTE_TOTAL)
+            @Html.DisplayName("IMPORTE TOTAL")
         </dt>
 
         <dd>
@@ -36,7 +30,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CLIENTE.NOMBRE)
+            @Html.DisplayName("NOMBRE DEL CLIENTE")
         </dt>
 
         <dd>
@@ -44,7 +38,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.REPUESTO.NOMBRE)
+            @Html.DisplayName("NOMBRE DEL REPUESTO")
         </dt>
 
         <dd>
