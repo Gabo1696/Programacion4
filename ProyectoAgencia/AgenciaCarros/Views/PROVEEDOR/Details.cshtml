@@ -5,14 +5,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>DETALLES PROVEEDOR</h2>
 
 <div>
     <h4>PROVEEDOR</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.NOMBRE_PROVEEDOR)
+            @Html.DisplayName("PROVEEDOR")
         </dt>
 
         <dd>
@@ -20,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DESCRIPCION_PROVEEDOR)
+            @Html.DisplayName("DESCRIPCION")
         </dt>
 
         <dd>
@@ -30,6 +30,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_PROVEEDOR }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("EDITAR", "Edit", new { id = Model.ID_PROVEEDOR }) |
+    @Html.ActionLink("REGRESAR", "Index")
 </p>

@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>FACTURAS GUARDADAS</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ingresar nueva factura", "Create")
 </p>
 <table class="table">
     <tr>
@@ -17,7 +17,7 @@
         </th>
         
         <th>
-            @Html.DisplayNameFor(model => model.IMPORTE_TOTAL)
+            @Html.DisplayName("IMPORTE TOTAL")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CLIENTE.NOMBRE)
@@ -50,9 +50,9 @@
             @Html.DisplayFor(modelItem => item.VEHICULO.MARCA)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_FACTURA }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_FACTURA }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_FACTURA })
+            @Html.ActionLink("EDITAR", "Edit", new { id=item.ID_FACTURA }) |
+            @Html.ActionLink("DETALLES", "Details", new { id=item.ID_FACTURA }) |
+            @Html.ActionLink("ELIMINAR", "Delete", new { id=item.ID_FACTURA })
         </td>
     </tr>
 }

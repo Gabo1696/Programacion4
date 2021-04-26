@@ -134,7 +134,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\INVENTARIOController.cs" />
     <Compile Include="Controllers\PROVEEDORController.cs" />
-    <Compile Include="Controllers\REPUESTOController.cs" />
+    <Compile Include="Controllers\REPUESTOesController.cs" />
     <Compile Include="Controllers\VEHICULOController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -281,11 +281,11 @@
     <Content Include="Views\FACTURA\Details.cshtml" />
     <Content Include="Views\FACTURA\Edit.cshtml" />
     <Content Include="Views\FACTURA\Index.cshtml" />
-    <Content Include="Views\REPUESTO\Create.cshtml" />
-    <Content Include="Views\REPUESTO\Delete.cshtml" />
-    <Content Include="Views\REPUESTO\Details.cshtml" />
-    <Content Include="Views\REPUESTO\Edit.cshtml" />
-    <Content Include="Views\REPUESTO\Index.cshtml" />
+    <Content Include="Views\REPUESTOes\Create.cshtml" />
+    <Content Include="Views\REPUESTOes\Delete.cshtml" />
+    <Content Include="Views\REPUESTOes\Details.cshtml" />
+    <Content Include="Views\REPUESTOes\Edit.cshtml" />
+    <Content Include="Views\REPUESTOes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

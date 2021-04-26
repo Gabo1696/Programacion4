@@ -5,18 +5,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>PROVEEDORES GUARDADOS</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ingresar nuevo proveedor", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.NOMBRE_PROVEEDOR)
+            @Html.DisplayName("NOMBRE PROVEEDOR")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DESCRIPCION_PROVEEDOR)
+            @Html.DisplayName("DESCRIPCION")
         </th>
         <th></th>
     </tr>
@@ -30,9 +30,9 @@
             @Html.DisplayFor(modelItem => item.DESCRIPCION_PROVEEDOR)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_PROVEEDOR }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_PROVEEDOR }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_PROVEEDOR })
+            @Html.ActionLink("EDITAR", "Edit", new { id=item.ID_PROVEEDOR }) |
+            @Html.ActionLink("DETALLES", "Details", new { id=item.ID_PROVEEDOR }) |
+            @Html.ActionLink("ELIMINAR", "Delete", new { id=item.ID_PROVEEDOR })
         </td>
     </tr>
 }

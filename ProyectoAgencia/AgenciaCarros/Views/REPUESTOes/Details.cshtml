@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>DETALLES DE REPUESTO </h2>
 
 <div>
     <h4>REPUESTO</h4>
@@ -28,7 +28,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PRECIO_UNITARIO)
+            @Html.DisplayName("PRECIO UNITARIO")
         </dt>
 
         <dd>
@@ -38,6 +38,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_REPUESTO }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("EDITAR", "Edit", new { id = Model.ID_REPUESTO }) |
+    @Html.ActionLink("REGRESAR", "Index")
 </p>

@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>INVENTARIO GUARDADO</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ingresar nuevo inventario", "Create")
 </p>
 <table class="table">
     <tr>
@@ -19,7 +19,7 @@
             @Html.DisplayNameFor(model => model.VALOR)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ULTIMA_VENTA)
+            @Html.DisplayName("ULTIMA VENTA")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.REPUESTO.NOMBRE)
@@ -42,9 +42,9 @@
             @Html.DisplayFor(modelItem => item.REPUESTO.NOMBRE)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_INVENTARIO }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_INVENTARIO }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_INVENTARIO })
+            @Html.ActionLink("EDITAR", "Edit", new { id=item.ID_INVENTARIO }) |
+            @Html.ActionLink("DETALLES", "Details", new { id=item.ID_INVENTARIO }) |
+            @Html.ActionLink("ELIMINAR", "Delete", new { id=item.ID_INVENTARIO })
         </td>
     </tr>
 }

@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>VEHICULOS GUARDADOS</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ingresar nuevo Vehiculo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -22,7 +22,7 @@
             @Html.DisplayNameFor(model => model.MODELO)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ANNO)
+            @Html.DisplayName("AÑO")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CILINDRAJE)
@@ -31,10 +31,10 @@
             @Html.DisplayNameFor(model => model.COLOR)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TIPO_COMBUSTIBLE)
+            @Html.DisplayName("TIPO DE COMBUSTIBLE")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PRECIO_UNITARIO)
+            @Html.DisplayName("PRECIO UNITARIO")
         </th>
         <th></th>
     </tr>
@@ -66,9 +66,9 @@
             @Html.DisplayFor(modelItem => item.PRECIO_UNITARIO)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_VEHICULO }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_VEHICULO }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_VEHICULO })
+            @Html.ActionLink("EDITAR", "Edit", new { id=item.ID_VEHICULO }) |
+            @Html.ActionLink("DETALLES", "Details", new { id=item.ID_VEHICULO }) |
+            @Html.ActionLink("ELIMINAR", "Delete", new { id=item.ID_VEHICULO })
         </td>
     </tr>
 }

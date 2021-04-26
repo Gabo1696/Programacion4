@@ -1,0 +1,45 @@
+﻿@model IEnumerable<AgenciaCarros.Models.REPUESTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>REPUESTOS GUARDADOS</h2>
+
+<p>
+    @Html.ActionLink("Ingresar repuesto nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPCION)
+        </th>
+        <th>
+            @Html.DisplayName("PRECIO UNITARIO")
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.NOMBRE)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DESCRIPCION)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PRECIO_UNITARIO)
+    </td>
+    <td>
+        @Html.ActionLink("EDITAR", "Edit", new { id = item.ID_REPUESTO }) |
+        @Html.ActionLink("DETALLES", "Details", new { id = item.ID_REPUESTO }) |
+        @Html.ActionLink("ELIMINAR", "Delete", new { id = item.ID_REPUESTO })
+    </td>
+</tr>
+}
+
+</table>

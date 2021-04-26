@@ -10,17 +10,17 @@ using AgenciaCarros.Models;
 
 namespace AgenciaCarros.Controllers
 {
-    public class REPUESTOController : Controller
+    public class REPUESTOesController : Controller
     {
         private ProyectoAgenciaEntities db = new ProyectoAgenciaEntities();
 
-        // GET: REPUESTO
+        // GET: REPUESTOes
         public ActionResult Index()
         {
             return View(db.REPUESTO.ToList());
         }
 
-        // GET: REPUESTO/Details/5
+        // GET: REPUESTOes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace AgenciaCarros.Controllers
             return View(rEPUESTO);
         }
 
-        // GET: REPUESTO/Create
+        // GET: REPUESTOes/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: REPUESTO/Create
+        // POST: REPUESTOes/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -54,11 +54,10 @@ namespace AgenciaCarros.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(rEPUESTO);
         }
 
-        // GET: REPUESTO/Edit/5
+        // GET: REPUESTOes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +72,7 @@ namespace AgenciaCarros.Controllers
             return View(rEPUESTO);
         }
 
-        // POST: REPUESTO/Edit/5
+        // POST: REPUESTOes/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +88,7 @@ namespace AgenciaCarros.Controllers
             return View(rEPUESTO);
         }
 
-        // GET: REPUESTO/Delete/5
+        // GET: REPUESTOes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +103,7 @@ namespace AgenciaCarros.Controllers
             return View(rEPUESTO);
         }
 
-        // POST: REPUESTO/Delete/5
+        // POST: REPUESTOes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

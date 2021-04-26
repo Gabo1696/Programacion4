@@ -46,7 +46,7 @@ namespace AgenciaCarros.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_VEHICULO,PLACA,MARCA,MODELO,ANNO,CILINDRAJE,COLOR,TIPO_COMBUSTIBLE,PRECIO_UNITARIO")] VEHICULO vEHICULO)
+        public ActionResult Create([Bind(Include = "ID_VEHICULO,PLACA,MARCA,MODELO,CILINDRAJE,COLOR,TIPO_COMBUSTIBLE,PRECIO_UNITARIO,ANNO")] VEHICULO vEHICULO)
         {
             if (ModelState.IsValid)
             {
