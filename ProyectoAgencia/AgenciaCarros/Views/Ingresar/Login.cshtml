@@ -1,0 +1,21 @@
+﻿@model AgenciaCarros.Models.INGRESO
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(d => d.USUARIO)
+    @Html.TextBoxFor(d => d.USUARIO)
+    <br />
+    @Html.LabelFor(d => d.CONTRASENA)
+    @Html.TextBoxFor(d => d.CONTRASENA)
+    <br />
+    <button>Ingresar</button>
+}
+<br/>
+@TempData["Mensaje"]

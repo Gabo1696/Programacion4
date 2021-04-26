@@ -128,10 +128,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Clases\Persona.cs" />
     <Compile Include="Controllers\CLIENTEController.cs" />
     <Compile Include="Controllers\EMPLEADOController.cs" />
     <Compile Include="Controllers\FACTURAController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngresarController.cs" />
     <Compile Include="Controllers\INVENTARIOController.cs" />
     <Compile Include="Controllers\PROVEEDORController.cs" />
     <Compile Include="Controllers\REPUESTOesController.cs" />
@@ -286,6 +288,7 @@
     <Content Include="Views\REPUESTOes\Details.cshtml" />
     <Content Include="Views\REPUESTOes\Edit.cshtml" />
     <Content Include="Views\REPUESTOes\Index.cshtml" />
+    <Content Include="Views\Ingresar\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

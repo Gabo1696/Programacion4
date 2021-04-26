@@ -22,7 +22,7 @@
           <Property Name="NOMBRE" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="APELLIDO1" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="APELLIDO2" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="EMAIL" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="50" />
           <Property Name="TELEFONO" Type="int" Nullable="false" />
           <Property Name="ID_DIRECCION" Type="int" />
         </EntityType>
@@ -482,7 +482,7 @@
           <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="APELLIDO1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="APELLIDO2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TELEFONO" Type="Int32" Nullable="false" />
           <Property Name="ID_DIRECCION" Type="Int32" />
           <NavigationProperty Name="INGRESO" Relationship="ProyectoAgenciaModel.R_2" FromRole="CLIENTE" ToRole="INGRESO" />

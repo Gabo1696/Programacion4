@@ -15,6 +15,7 @@ namespace AgenciaCarros.Controllers
         private ProyectoAgenciaEntities db = new ProyectoAgenciaEntities();
 
         // GET: VEHICULO
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.VEHICULO.ToList());
