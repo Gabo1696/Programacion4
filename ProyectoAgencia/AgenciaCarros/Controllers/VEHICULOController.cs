@@ -15,7 +15,6 @@ namespace AgenciaCarros.Controllers
         private ProyectoAgenciaEntities db = new ProyectoAgenciaEntities();
 
         // GET: VEHICULO
-        [Authorize]
         public ActionResult Index()
         {
             return View(db.VEHICULO.ToList());
@@ -51,9 +50,17 @@ namespace AgenciaCarros.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.VEHICULO.Add(vEHICULO);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (db.VEHICULO.Any(x => x.ID_VEHICULO == vEHICULO.ID_VEHICULO))
+                {
+                    ModelState.AddModelError("", "Ya existe el id");
+                }
+                else
+                {
+                    db.VEHICULO.Add(vEHICULO);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+               
             }
 
             return View(vEHICULO);

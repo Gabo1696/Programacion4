@@ -96,7 +96,10 @@
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="mynav_dropdown-content" id="myDropdown">
+                        <a>@Html.ActionLink("Ver Direccion", "Index", "DETALLE_DIRECCION1")</a>
                         <a>@Html.ActionLink("Ver Clientes", "Index", "CLIENTE")</a>
+                        <a>@Html.ActionLink("Ver Empleados", "Index", "EMPLEADO")</a>
+
                         <a>@Html.ActionLink("Ver Proveedores", "Index", "PROVEEDOR")</a>
                         <a>@Html.ActionLink("Ver Inventario", "Index", "INVENTARIO")</a>
                     </div>
@@ -119,7 +122,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>Te ofrecemos gran variedad de vehiculos</p>
         </footer>
     </div>
 

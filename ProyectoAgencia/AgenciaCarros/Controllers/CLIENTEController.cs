@@ -53,9 +53,16 @@ namespace AgenciaCarros.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.CLIENTE.Add(cLIENTE);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (db.CLIENTE.Any(x => x.ID_CLIENTE == cLIENTE.ID_CLIENTE))
+                {
+                    ModelState.AddModelError("", "Ya existe el id");
+                }
+                else
+                {
+                    db.CLIENTE.Add(cLIENTE);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
 
             ViewBag.ID_CLIENTE = new SelectList(db.INGRESO, "ID_CLIENTE", "USUARIO", cLIENTE.ID_CLIENTE);
@@ -118,9 +125,18 @@ namespace AgenciaCarros.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            CLIENTE cLIENTE = db.CLIENTE.Find(id);
-            db.CLIENTE.Remove(cLIENTE);
-            db.SaveChanges();
+            try
+            {
+                CLIENTE cLIENTE = db.CLIENTE.Find(id);
+                db.CLIENTE.Remove(cLIENTE);
+                db.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                ViewData["data"] = "No se puede borrar porque existe un factura asociado";
+                return View("Delete");
+
+            }
             return RedirectToAction("Index");
         }
 

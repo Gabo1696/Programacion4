@@ -71,9 +71,16 @@ namespace AgenciaCarros.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.DETALLE_DIRECCION.Add(dETALLE_DIRECCION);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (db.DETALLE_DIRECCION.Any(x => x.ID_DIRECCION == dETALLE_DIRECCION.ID_DIRECCION))
+                {
+                    ModelState.AddModelError("", "Ya existe el id");
+                }
+                else
+                {
+                    db.DETALLE_DIRECCION.Add(dETALLE_DIRECCION);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
 
             ViewBag.ID_CANTON = new SelectList(db.CANTON, "ID_CANTON", "NOMBRE_CANTON", dETALLE_DIRECCION.ID_CANTON);
@@ -95,6 +102,8 @@ namespace AgenciaCarros.Controllers
             {
                 return HttpNotFound();
             }
+            List<PROVINCIA> ProvinciaLista = db.PROVINCIA.ToList();
+            ViewBag.ProvinciaLista = new SelectList(ProvinciaLista, "ID_PROVINCIA", "NOMBRE_PROVINCIA");
             ViewBag.ID_CANTON = new SelectList(db.CANTON, "ID_CANTON", "NOMBRE_CANTON", dETALLE_DIRECCION.ID_CANTON);
             ViewBag.ID_PROVINCIA = new SelectList(db.PROVINCIA, "ID_PROVINCIA", "NOMBRE_PROVINCIA", dETALLE_DIRECCION.ID_PROVINCIA);
             ViewBag.ID_DISTRITO = new SelectList(db.DISTRITO, "ID_DISTRITO", "NOMBRE_DISTRITO", dETALLE_DIRECCION.ID_DISTRITO);
@@ -110,9 +119,11 @@ namespace AgenciaCarros.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 db.Entry(dETALLE_DIRECCION).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
+
             }
             ViewBag.ID_CANTON = new SelectList(db.CANTON, "ID_CANTON", "NOMBRE_CANTON", dETALLE_DIRECCION.ID_CANTON);
             ViewBag.ID_PROVINCIA = new SelectList(db.PROVINCIA, "ID_PROVINCIA", "NOMBRE_PROVINCIA", dETALLE_DIRECCION.ID_PROVINCIA);

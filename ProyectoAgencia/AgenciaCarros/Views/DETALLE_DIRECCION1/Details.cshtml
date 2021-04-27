@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>DETALLES</h2>
 
 <div>
-    <h4>DETALLE_DIRECCION</h4>
+    <h4>DETALLE DIRECCION</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -20,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CANTON.NOMBRE_CANTON)
+            @Html.DisplayName("CANTON")
         </dt>
 
         <dd>
@@ -28,7 +28,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PROVINCIA.NOMBRE_PROVINCIA)
+            @Html.DisplayName("PROVINCIA")
         </dt>
 
         <dd>
@@ -36,7 +36,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DISTRITO.NOMBRE_DISTRITO)
+            @Html.DisplayName("DISTRITO")
         </dt>
 
         <dd>
@@ -46,6 +46,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_DIRECCION }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("EDITAR", "Edit", new { id = Model.ID_DIRECCION }) |
+    @Html.ActionLink("REGRESAR", "Index")
 </p>

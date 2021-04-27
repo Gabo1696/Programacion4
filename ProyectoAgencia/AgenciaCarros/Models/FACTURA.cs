@@ -11,9 +11,11 @@ namespace AgenciaCarros.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class FACTURA
     {
+        [Key]
         public int ID_FACTURA { get; set; }
         public System.DateTime FECHA { get; set; }
         public int IMPORTE_TOTAL { get; set; }

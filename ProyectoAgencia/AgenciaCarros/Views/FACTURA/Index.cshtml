@@ -7,7 +7,9 @@
 
 <h2>FACTURAS GUARDADAS</h2>
 
-
+<p>
+    @Html.ActionLink("Ingresar una nueva factura", "Create")
+</p>
 <table class="table">
     <tr>
         <th>
@@ -48,7 +50,8 @@
             @Html.DisplayFor(modelItem => item.VEHICULO.MARCA)
         </td>
         <td>
-            @Html.ActionLink("DETALLES", "Details", new { id=item.ID_FACTURA }) |
+            @Html.ActionLink("EDITAR", "Edit", new { id = item.ID_FACTURA }) |
+            @Html.ActionLink("DETALLES", "Details", new { id = item.ID_FACTURA }) |
         </td>
     </tr>
 }

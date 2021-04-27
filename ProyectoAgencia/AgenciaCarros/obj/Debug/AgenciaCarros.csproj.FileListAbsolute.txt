@@ -79,7 +79,6 @@ C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\bi
 C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\bin\es\System.Web.WebPages.resources.dll
 C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debug\AgenciaCarros.csprojAssemblyReference.cache
 C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debug\AgenciaCarros.csproj.CoreCompileInputs.cache
 C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debug\AgenciaCarros.csproj.CopyComplete
 C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debug\AgenciaCarros.dll
@@ -450,3 +449,4 @@ C:\Users\Congo\Source\Repos\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debu
 C:\Users\Congo\Source\Repos\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debug\AgenciaCarros.csproj.CopyComplete
 C:\Users\Congo\Source\Repos\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debug\AgenciaCarros.dll
 C:\Users\Congo\Source\Repos\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debug\AgenciaCarros.pdb
+C:\Users\Gabriel\Documents\GitHub\Programacion4\ProyectoAgencia\AgenciaCarros\obj\Debug\AgenciaCarros.csprojAssemblyReference.cache

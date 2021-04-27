@@ -1,4 +1,6 @@
-﻿@model AgenciaCarros.Models.VEHICULO
+﻿@using AgenciaCarros.Models
+
+@model AgenciaCarros.Models.VEHICULO
 
 @{
     ViewBag.Title = "Edit";
@@ -10,7 +12,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>VEHICULO</h4>
         <hr />
@@ -68,7 +70,8 @@
         <div class="form-group">
             @Html.Label("TIPO DE COMBUSTIBLE", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.TIPO_COMBUSTIBLE, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.TIPO_COMBUSTIBLE, new SelectList(Enum.GetValues(typeof(TIPO_COMBUSTIBLE))),
+            "Selecciona el tipo", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.TIPO_COMBUSTIBLE, "", new { @class = "text-danger" })
             </div>
         </div>

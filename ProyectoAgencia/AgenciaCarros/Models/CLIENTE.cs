@@ -24,20 +24,19 @@ namespace AgenciaCarros.Models
         [Required(ErrorMessage = "El ID es obligatorio")]
         public int ID_CLIENTE { get; set; }
         [Required(ErrorMessage = "La cedula es obligatoria")]
-        [MaxLength(9)]
-        [MinLength(9)]
+       
         public int CEDULA { get; set; }
         [Required(ErrorMessage = "El Nombre es obligatorio")]
-        [MaxLength(30)]
+    
         public string NOMBRE { get; set; }
         [Required(ErrorMessage = "El primer apellido es obligatorio")]
-        [MaxLength(30)]
+      
         public string APELLIDO1 { get; set; }
         [Required(ErrorMessage = "El segundo apellido es obligatorio")]
-        [MaxLength(30)]
+       
         public string APELLIDO2 { get; set; }
         [Required(ErrorMessage = "El correo es obligatorio")]
-        [MaxLength(30)]
+        [EmailAddress]
         public string EMAIL { get; set; }
         [Required(ErrorMessage = "El telefono es obligatorio")]
         public int TELEFONO { get; set; }

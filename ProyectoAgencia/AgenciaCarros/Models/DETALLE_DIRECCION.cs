@@ -11,7 +11,8 @@ namespace AgenciaCarros.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class DETALLE_DIRECCION
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,11 +20,15 @@ namespace AgenciaCarros.Models
         {
             this.CLIENTE = new HashSet<CLIENTE>();
         }
-    
+        [Required(ErrorMessage = "El ID es obligatorio")]
         public int ID_DIRECCION { get; set; }
+        [Required(ErrorMessage = "El ID es obligatorio")]
         public string DESCRIPCION { get; set; }
+        [Required(ErrorMessage = "El ID es obligatorio")]
         public Nullable<int> ID_PROVINCIA { get; set; }
+        [Required(ErrorMessage = "El ID es obligatorio")]
         public Nullable<int> ID_CANTON { get; set; }
+        [Required(ErrorMessage = "El ID es obligatorio")]
         public Nullable<int> ID_DISTRITO { get; set; }
     
         public virtual CANTON CANTON { get; set; }

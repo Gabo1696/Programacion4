@@ -6,7 +6,10 @@
 }
 
 <h2>REPUESTOS GUARDADOS</h2>
+<p>
+    @Html.ActionLink("Ingresar un nuevo repuesto", "Create")
 
+</p>
 
 <table class="table">
     <tr>
@@ -33,7 +36,8 @@
         @Html.DisplayFor(modelItem => item.PRECIO_UNITARIO)
     </td>
     <td>
-        @Html.ActionLink("DETALLES", "Details", new { id = item.ID_REPUESTO }) |
+        @Html.ActionLink("EDITAR", "Edit", new { id = item.ID_REPUESTO }) |
+        @Html.ActionLink("DETALLES", "Details", new { id = item.ID_REPUESTO })
     </td>
 </tr>
 }

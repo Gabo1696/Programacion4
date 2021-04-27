@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>DIRECCIONES GUARDADAS</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ingresar dirrecion nueva", "Create")
 </p>
 <table class="table">
     <tr>
@@ -16,13 +16,13 @@
             @Html.DisplayNameFor(model => model.DESCRIPCION)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CANTON.NOMBRE_CANTON)
+            @Html.DisplayName("CANTON")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PROVINCIA.NOMBRE_PROVINCIA)
+            @Html.DisplayName("PROVINCIA")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DISTRITO.NOMBRE_DISTRITO)
+            @Html.DisplayName("DISTRITO")
         </th>
         <th></th>
     </tr>
@@ -42,9 +42,9 @@
             @Html.DisplayFor(modelItem => item.DISTRITO.NOMBRE_DISTRITO)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_DIRECCION }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_DIRECCION }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_DIRECCION })
+            @Html.ActionLink("EDITAR", "Edit", new { id=item.ID_DIRECCION }) |
+            @Html.ActionLink("DETALLES", "Details", new { id=item.ID_DIRECCION }) |
+           
         </td>
     </tr>
 }

@@ -52,9 +52,17 @@ namespace AgenciaCarros.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.INVENTARIO.Add(iNVENTARIO);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (db.INVENTARIO.Any(x => x.ID_INVENTARIO == iNVENTARIO.ID_INVENTARIO))
+                {
+                    ModelState.AddModelError("", "Ya existe el id");
+                }
+                else
+                {
+                    db.INVENTARIO.Add(iNVENTARIO);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                
             }
 
             ViewBag.ID_REPUESTO = new SelectList(db.REPUESTO, "ID_REPUESTO", "NOMBRE", iNVENTARIO.ID_REPUESTO);
@@ -86,9 +94,12 @@ namespace AgenciaCarros.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 db.Entry(iNVENTARIO).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
+
+
             }
             ViewBag.ID_REPUESTO = new SelectList(db.REPUESTO, "ID_REPUESTO", "NOMBRE", iNVENTARIO.ID_REPUESTO);
             return View(iNVENTARIO);

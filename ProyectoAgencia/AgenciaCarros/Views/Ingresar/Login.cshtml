@@ -9,11 +9,14 @@
 
 @using (Html.BeginForm())
 {
+    <div class="card-body">
+
+    </div>
     @Html.LabelFor(d => d.USUARIO)
-    @Html.TextBoxFor(d => d.USUARIO)
+    @Html.TextBoxFor(d => d.USUARIO,new { @class="form-control"})
     <br />
     @Html.LabelFor(d => d.CONTRASENA)
-    @Html.TextBoxFor(d => d.CONTRASENA)
+    @Html.PasswordFor(d => d.CONTRASENA, new { @class = "form-control" })
     <br />
     <button>Ingresar</button>
 }

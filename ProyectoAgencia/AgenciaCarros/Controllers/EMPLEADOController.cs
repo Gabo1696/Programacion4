@@ -52,9 +52,16 @@ namespace AgenciaCarros.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.EMPLEADO.Add(eMPLEADO);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (db.EMPLEADO.Any(x => x.ID_EMPLEADO == eMPLEADO.ID_EMPLEADO))
+                {
+                    ModelState.AddModelError("", "Ya existe el id");
+                }
+                else
+                {
+                    db.EMPLEADO.Add(eMPLEADO);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
 
             ViewBag.ID_ROL = new SelectList(db.ROL, "ID_ROL", "DESCRIPCION", eMPLEADO.ID_ROL);
@@ -86,9 +93,11 @@ namespace AgenciaCarros.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 db.Entry(eMPLEADO).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
+
             }
             ViewBag.ID_ROL = new SelectList(db.ROL, "ID_ROL", "DESCRIPCION", eMPLEADO.ID_ROL);
             return View(eMPLEADO);

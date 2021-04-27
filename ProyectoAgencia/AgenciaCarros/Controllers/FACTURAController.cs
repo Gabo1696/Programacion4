@@ -54,9 +54,16 @@ namespace AgenciaCarros.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.FACTURA.Add(fACTURA);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (db.FACTURA.Any(x => x.ID_FACTURA == fACTURA.ID_FACTURA))
+                {
+                    ModelState.AddModelError("", "Ya existe el id");
+                }
+                else
+                {
+                    db.FACTURA.Add(fACTURA);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
 
             ViewBag.ID_CLIENTE = new SelectList(db.CLIENTE, "ID_CLIENTE", "NOMBRE", fACTURA.ID_CLIENTE);
@@ -92,9 +99,11 @@ namespace AgenciaCarros.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 db.Entry(fACTURA).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
+
             }
             ViewBag.ID_CLIENTE = new SelectList(db.CLIENTE, "ID_CLIENTE", "NOMBRE", fACTURA.ID_CLIENTE);
             ViewBag.ID_REPUESTO = new SelectList(db.REPUESTO, "ID_REPUESTO", "NOMBRE", fACTURA.ID_REPUESTO);

@@ -18,18 +18,20 @@ namespace AgenciaCarros.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(Persona usuario, string url)
+        public ActionResult Login(Persona usuario)
         {
-            if (IsValid(usuario)){
-                FormsAuthentication.SetAuthCookie(usuario.USUARIO, false);
-                if (url != null)
+            if (ModelState.IsValid)
+            {
+                bool IsValidUser = usuario.Autenticar();
+                if (IsValidUser)
                 {
-                    return Redirect(url);
+                    FormsAuthentication.SetAuthCookie(usuario.USUARIO, false);
+                    return RedirectToAction("Index", "CLIENTE");
                 }
-                return RedirectToAction("Index", "Home");
+                
             }
-            TempData["Mensaje"] = "Credenciales Incorrectas";
-            return View(usuario);
+            ModelState.AddModelError("", "error");
+            return View();
         }
 
         public bool IsValid(Persona usuario)

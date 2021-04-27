@@ -50,9 +50,17 @@ namespace AgenciaCarros.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.PROVEEDOR.Add(pROVEEDOR);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (db.PROVEEDOR.Any(x => x.ID_PROVEEDOR == pROVEEDOR.ID_PROVEEDOR))
+                {
+                    ModelState.AddModelError("", "Ya existe el id");
+                }
+                else
+                {
+                    db.PROVEEDOR.Add(pROVEEDOR);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                
             }
 
             return View(pROVEEDOR);
