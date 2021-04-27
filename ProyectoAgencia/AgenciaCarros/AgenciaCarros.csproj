@@ -52,6 +52,9 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mvc.CascadeDropDown, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mvc.CascadeDropDown.2.0.3\lib\Mvc.CascadeDropDown.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -130,6 +133,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Controllers\CLIENTEController.cs" />
+    <Compile Include="Controllers\DETALLE_DIRECCION1Controller.cs" />
     <Compile Include="Controllers\EMPLEADOController.cs" />
     <Compile Include="Controllers\FACTURAController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -289,6 +293,11 @@
     <Content Include="Views\REPUESTOes\Edit.cshtml" />
     <Content Include="Views\REPUESTOes\Index.cshtml" />
     <Content Include="Views\Ingresar\Login.cshtml" />
+    <Content Include="Views\DETALLE_DIRECCION1\Create.cshtml" />
+    <Content Include="Views\DETALLE_DIRECCION1\Delete.cshtml" />
+    <Content Include="Views\DETALLE_DIRECCION1\Details.cshtml" />
+    <Content Include="Views\DETALLE_DIRECCION1\Edit.cshtml" />
+    <Content Include="Views\DETALLE_DIRECCION1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
