@@ -73,7 +73,7 @@
       <PropertyRef Name="ID_CANTON" />
     </Key>
     <Property Name="ID_CANTON" Type="Int32" Nullable="false" />
-    <Property Name="NOMBRE_CANTON" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE_CANTON" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="ID_PROVINCIA" Type="Int32" />
     <NavigationProperty Name="PROVINCIA" Relationship="ProyectoAgenciaModel.R_3" FromRole="CANTON" ToRole="PROVINCIA" />
     <NavigationProperty Name="DISTRITO" Relationship="ProyectoAgenciaModel.R_4" FromRole="CANTON" ToRole="DISTRITO" />
@@ -114,7 +114,7 @@
       <PropertyRef Name="ID_DISTRITO" />
     </Key>
     <Property Name="ID_DISTRITO" Type="Int32" Nullable="false" />
-    <Property Name="NOMBRE_DISTRITO" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE_DISTRITO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="ID_CANTON" Type="Int32" />
     <NavigationProperty Name="CANTON" Relationship="ProyectoAgenciaModel.R_4" FromRole="DISTRITO" ToRole="CANTON" />
     <NavigationProperty Name="DETALLE_DIRECCION" Relationship="ProyectoAgenciaModel.R_7" FromRole="DISTRITO" ToRole="DETALLE_DIRECCION" />

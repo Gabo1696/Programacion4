@@ -5,7 +5,7 @@
       <PropertyRef Name="ID_CANTON" />
     </Key>
     <Property Name="ID_CANTON" Type="int" Nullable="false" />
-    <Property Name="NOMBRE_CANTON" Type="varchar" MaxLength="20" />
+    <Property Name="NOMBRE_CANTON" Type="varchar" MaxLength="30" />
     <Property Name="ID_PROVINCIA" Type="int" />
   </EntityType>
   <EntityType Name="CLIENTE">
@@ -36,7 +36,7 @@
       <PropertyRef Name="ID_DISTRITO" />
     </Key>
     <Property Name="ID_DISTRITO" Type="int" Nullable="false" />
-    <Property Name="NOMBRE_DISTRITO" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NOMBRE_DISTRITO" Type="varchar" MaxLength="30" />
     <Property Name="ID_CANTON" Type="int" />
   </EntityType>
   <EntityType Name="EMPLEADO">
