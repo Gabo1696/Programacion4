@@ -22,6 +22,7 @@ namespace AgenciaCarros.Controllers
             return View(dETALLE_DIRECCION.ToList());
         }
 
+     
         // GET: DETALLE_DIRECCION1/Details/5
         public ActionResult Details(int? id)
         {
@@ -40,11 +41,25 @@ namespace AgenciaCarros.Controllers
         // GET: DETALLE_DIRECCION1/Create
         public ActionResult Create()
         {
-            
+            List<PROVINCIA> ProvinciaLista = db.PROVINCIA.ToList();
+            ViewBag.ProvinciaLista = new SelectList(ProvinciaLista, "ID_PROVINCIA", "NOMBRE_PROVINCIA");
             ViewBag.ID_CANTON = new SelectList(db.CANTON, "ID_CANTON", "NOMBRE_CANTON");
             ViewBag.ID_PROVINCIA = new SelectList(db.PROVINCIA, "ID_PROVINCIA", "NOMBRE_PROVINCIA");
             ViewBag.ID_DISTRITO = new SelectList(db.DISTRITO, "ID_DISTRITO", "NOMBRE_DISTRITO");
             return View();
+        }
+
+        public JsonResult ObtenerCanton(int ID_PROVINCIA)
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+            List<CANTON> CantonLista = db.CANTON.Where(x => x.ID_PROVINCIA == ID_PROVINCIA).ToList();
+            return Json(CantonLista, JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult ObtenerDistrito(int ID_CANTON)
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+            List<DISTRITO> DistritoLista = db.DISTRITO.Where(x => x.ID_CANTON == ID_CANTON).ToList();
+            return Json(DistritoLista, JsonRequestBehavior.AllowGet);
         }
 
         // POST: DETALLE_DIRECCION1/Create

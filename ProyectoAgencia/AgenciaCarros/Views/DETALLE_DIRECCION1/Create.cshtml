@@ -34,15 +34,18 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ID_PROVINCIA, "ID_PROVINCIA", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("ID_PROVINCIA", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ID_PROVINCIA, "", new { @class = "text-danger" })
+                @if (ViewBag.ProvinciaLista != null)
+                {
+                    @Html.DropDownList("ID_PROVINCIA", ViewBag.ProvinciaLista as SelectList,"Seleccione Provincia", htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ID_PROVINCIA, "", new { @class = "text-danger" })
+                }
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.ID_CANTON, "ID_CANTON", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("ID_CANTON", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("ID_CANTON", new SelectList(" "),"Seleccione Canton", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ID_CANTON, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -50,7 +53,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ID_DISTRITO, "ID_DISTRITO", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("ID_DISTRITO", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("ID_DISTRITO", new SelectList(" "), "Seleccione Distrito", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ID_DISTRITO, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -66,3 +69,28 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#ID_PROVINCIA").change(function () {
+            $.get("/DETALLE_DIRECCION1/ObtenerCanton", { ID_PROVINCIA: $("#ID_PROVINCIA").val() }, function (data) {
+                $("#ID_CANTON").empty();
+                $.each(data, function (index, row) {
+                    $("#ID_CANTON").append("<option value='" + row.ID_CANTON + "'>" + row.NOMBRE_CANTON + "</option>")
+                });
+            });
+        })
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#ID_CANTON").change(function () {
+            $.get("/DETALLE_DIRECCION1/ObtenerDistrito", { ID_CANTON: $("#ID_CANTON").val() }, function (data) {
+                $("#ID_DISTRITO").empty();
+                $.each(data, function (index, row) {
+                    $("#ID_DISTRITO").append("<option value='" + row.ID_DISTRITO + "'>" + row.NOMBRE_DISTRITO + "</option>")
+                });
+            });
+        })
+    });
+</script>
