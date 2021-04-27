@@ -11,7 +11,8 @@ namespace AgenciaCarros.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class VEHICULO
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,15 +20,32 @@ namespace AgenciaCarros.Models
         {
             this.FACTURA = new HashSet<FACTURA>();
         }
-    
+        [Required(ErrorMessage = "El Id es obligatorio")]
+
         public int ID_VEHICULO { get; set; }
+        [Required(ErrorMessage = "El placa es obligatorio")]
+
         public int PLACA { get; set; }
+        [Required(ErrorMessage = "El marca es obligatorio")]
+
         public string MARCA { get; set; }
+        [Required(ErrorMessage = "El modelo es obligatorio")]
+
         public string MODELO { get; set; }
+        [Required(ErrorMessage = "El cilindraje es obligatorio")]
+
         public int CILINDRAJE { get; set; }
+        [Required(ErrorMessage = "El color es obligatorio")]
+
         public string COLOR { get; set; }
+        [Required(ErrorMessage = "El combustible es obligatorio")]
+
         public string TIPO_COMBUSTIBLE { get; set; }
+        [Required(ErrorMessage = "El precio unitario es obligatorio")]
+
         public int PRECIO_UNITARIO { get; set; }
+        [Required(ErrorMessage = "El anno es obligatorio")]
+
         public string ANNO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

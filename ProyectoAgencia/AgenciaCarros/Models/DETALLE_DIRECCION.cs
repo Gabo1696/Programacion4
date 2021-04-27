@@ -22,13 +22,13 @@ namespace AgenciaCarros.Models
         }
         [Required(ErrorMessage = "El ID es obligatorio")]
         public int ID_DIRECCION { get; set; }
-        [Required(ErrorMessage = "El ID es obligatorio")]
+        [Required(ErrorMessage = "El descripcion es obligatorio")]
         public string DESCRIPCION { get; set; }
-        [Required(ErrorMessage = "El ID es obligatorio")]
+        [Required(ErrorMessage = "El provincia es obligatorio")]
         public Nullable<int> ID_PROVINCIA { get; set; }
-        [Required(ErrorMessage = "El ID es obligatorio")]
+        [Required(ErrorMessage = "El canton es obligatorio")]
         public Nullable<int> ID_CANTON { get; set; }
-        [Required(ErrorMessage = "El ID es obligatorio")]
+        [Required(ErrorMessage = "El distrito es obligatorio")]
         public Nullable<int> ID_DISTRITO { get; set; }
     
         public virtual CANTON CANTON { get; set; }

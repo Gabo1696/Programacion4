@@ -11,15 +11,30 @@ namespace AgenciaCarros.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class EMPLEADO
     {
+        [Required(ErrorMessage = "El ID es obligatorio")]
+
         public int ID_EMPLEADO { get; set; }
+        [Required(ErrorMessage = "El Nombre es obligatorio")]
+
         public string NOMBRE { get; set; }
+        [Required(ErrorMessage = "El Apellido es obligatorio")]
+
         public string APELLIDO1 { get; set; }
+        [Required(ErrorMessage = "El Apellido es obligatorio")]
+
         public string APELLIDO2 { get; set; }
+        [Required(ErrorMessage = "El Telefono es obligatorio")]
+
         public int TELEFONO { get; set; }
+        [Required(ErrorMessage = "El Email es obligatorio")]
+
         public string EMAIL { get; set; }
+        [Required(ErrorMessage = "El Salario es obligatorio")]
+
         public int SALARIO { get; set; }
         public Nullable<int> ID_ROL { get; set; }
     

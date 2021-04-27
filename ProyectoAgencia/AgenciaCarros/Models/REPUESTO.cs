@@ -11,7 +11,8 @@ namespace AgenciaCarros.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class REPUESTO
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,10 +22,17 @@ namespace AgenciaCarros.Models
             this.INVENTARIO = new HashSet<INVENTARIO>();
             this.PROVEEDOR = new HashSet<PROVEEDOR>();
         }
-    
+        [Required(ErrorMessage = "El Id es obligatorio")]
+
         public int ID_REPUESTO { get; set; }
+        [Required(ErrorMessage = "El Nombre es obligatorio")]
+
         public string NOMBRE { get; set; }
+        [Required(ErrorMessage = "La descripcion es obligatorio")]
+
         public string DESCRIPCION { get; set; }
+        [Required(ErrorMessage = "El precio untario es obligatorio")]
+
         public int PRECIO_UNITARIO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -17,14 +17,30 @@ namespace AgenciaCarros.Models
     {
         [Key]
         public int ID_FACTURA { get; set; }
+        [Required(ErrorMessage = "El Fecha es obligatorio")]
+
         public System.DateTime FECHA { get; set; }
+        [Required(ErrorMessage = "El Importe total es obligatorio")]
+
         public int IMPORTE_TOTAL { get; set; }
+        [Required(ErrorMessage = "El Id cliente es obligatorio")]
+
         public Nullable<int> ID_CLIENTE { get; set; }
+        [Required(ErrorMessage = "El id repuesto es obligatorio")]
+
         public Nullable<int> ID_REPUESTO { get; set; }
+        [Required(ErrorMessage = "El  id vehiculo es obligatorio")]
+
         public Nullable<int> ID_VEHICULO { get; set; }
-    
+        [Required(ErrorMessage = "El cliente es obligatorio")]
+
+
         public virtual CLIENTE CLIENTE { get; set; }
+        [Required(ErrorMessage = "El repuesto es obligatorio")]
+
         public virtual REPUESTO REPUESTO { get; set; }
+        [Required(ErrorMessage = "El vehiculo es obligatorio")]
+
         public virtual VEHICULO VEHICULO { get; set; }
     }
 }
